@@ -1,16 +1,27 @@
 $white:#fff;
-$black:#000000;
+$black:#101010;
 
 //background
-$primary:#12061e;
-$secondary:#231236;
+$primary: #1A1A1A;
+$secondary:#f4bc33;
+$button-dark: #2A2A2A;
+
+
 
 //text
-$maintext:#cbc6cc;
-$secondarytext: #8b7f95;
+$main-text:#777777;
 
-$maintextsize: 14px;
-$titletextsize: 25px;
+$secondary-text: #cecece;
+
+$subtitle: #212121;
+$subtitle-grey: #d3d3d1;
+
+$main-text-size: 15px;
+$small-text-size: 12px;
+$h1: 54px;
+$h2: 25px;
+
+
 
 //z-index
 $z-index-header:  1000;
