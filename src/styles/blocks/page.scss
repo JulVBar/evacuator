@@ -1,0 +1,9 @@
+.page {
+    overflow: hidden;
+}
+
+@media (min-width: 992px) {
+    .page {
+        padding-right: 25px;
+    }
+}
