@@ -1,0 +1,48 @@
+.header {
+    width: 100%;
+    padding: 0 50px;
+    @include flex-h-center;
+
+    &__logo {
+        width: 200px;
+        @include flex-h-center;
+
+        img {
+            width: 100%;
+            height: 40px;
+            object-fit: cover;
+        }
+    }
+
+    &__container {
+        margin-left: auto;
+        @include flex-h-center;
+        height: 100%;
+    }
+
+    &__contacts {
+        @include flex-column-center;
+    }
+
+    &__tel {
+        padding: 3px 0;
+        color: $white;
+        font-weight: 700;
+        letter-spacing: 2px;
+        transition: color .3s linear;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+
+    &__devider {
+        width: 100%;
+        height: 3px;
+        background-image: linear-gradient(-45deg, transparent 10%, $secondary 10%, $secondary 50%, transparent 50%, transparent 60%, $secondary 60%, $secondary);
+        background-size: 7px 7px;
+    }
+
+}
+
+

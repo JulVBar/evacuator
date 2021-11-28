@@ -1,42 +1,50 @@
 .subtitle-2 {
-    font-family: 'Jost', sans-serif;
-    font-size: $h2;
+    color: $white;
+    font-family: $ff-title;
+    font-size: 25px;
     font-weight: 600;
-    color: $subtitle;
+    text-transform: uppercase; 
+    line-height: 30px;
     letter-spacing: 6px;
-    text-transform: uppercase;
 }
 
 .subtitle-3 {
-    font-family: 'Jost', sans-serif;
-    font-size: $main-text;
+    color: $secondary;
+    font-family: $ff-title;
+    font-size: 15px;
     font-weight: 400;
-    color: $subtitle-grey;
-    letter-spacing: 3px;
     text-transform: uppercase;
+    line-height: 25px;
+    letter-spacing: 3px;
 }
 
 .subtitle-4 {
-    font-family: 'Jost', sans-serif;
-    font-size: $small-text-size;
+    color: $white;
+    font-family: $ff-title;
+    font-size: $text;
     font-weight: 400;
-    color: $subtitle;
-    letter-spacing: 3px;
+    line-height: 20px;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-.subtitle-5 {
-    font-family: 'Jost', sans-serif;
-    font-size: $small-text-size;
-    font-weight: 600;
-    color: $subtitle;
-    text-transform: uppercase;
+.secondary-text {
+    font-size: $small-text;
+    color: $color-text;
 }
 
+// .titles-test {
+//     margin-top: 400px;
+//     border: 2px solid black;
+    
 
-.titles-test {
-    margin-top: 400px;
-}
+//     padding-left: 53px;
+//     background-position: left center;
+    
+//     background-repeat: no-repeat;
+
+//     background-image: url("./images/xoh.jpg");
+// }
 
 
 

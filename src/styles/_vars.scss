@@ -1,32 +1,46 @@
-$white:#fff;
-$black:#101010;
+$white:rgb(255, 255, 255);
+$black:rgb(0, 0, 0);
 
 //background
-$primary: #1A1A1A;
-$secondary:#f4bc33;
-$button-dark: #2A2A2A;
-
-
+$primary: #1a1a1a;
+$secondary:rgb(244, 188, 51);
+$mine-shaft: rgb(42, 42, 42);
 
 //text
-$main-text:#777777;
+$color-text:#b6b6b2;
+$grey: #808080;
 
-$secondary-text: #cecece;
 
-$subtitle: #212121;
-$subtitle-grey: #d3d3d1;
+//text size
+$text: 15px;
+$small-text: 12px;
 
-$main-text-size: 15px;
-$small-text-size: 12px;
-$h1: 54px;
-$h2: 25px;
 
+
+
+$ff-main: 'Open Sans', sans-serif;
+$ff-title: 'Jost', sans-serif;
 
 
 //z-index
 $z-index-header:  1000;
 
+
+
 //media
-$tablet-bp: 991px;
-$mobile-bp: 575px;
-$mobile-bp-thin: 375px;
+$middle-desk: 1440px;
+$mini-desk: 1200px;
+    $desktop: 1025px;
+$tablet: 1024px;
+$mini-tablet: 768px;
+$mobile: 576px;
+$mini-mobile: 376px;
+
+
+
+
+$main-shadow:
+    0 80px 80px -20px rgba(154, 156, 165, 0.08),
+    0 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0 4px 4px -4px rgba(30, 33, 44, 0.03);

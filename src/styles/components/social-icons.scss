@@ -1,0 +1,23 @@
+.social-icons{
+    margin-right: 40px;
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        padding: 10px 8px;
+    }
+    
+    &__link {
+        font-size: 15px;
+        color: $grey;
+        line-height: 10px;
+
+        position: relative;
+        transition: color .3s linear;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+}

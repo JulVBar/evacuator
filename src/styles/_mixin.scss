@@ -1,0 +1,51 @@
+@mixin breakpoint($bp) {
+    @media (max-width: $bp) {
+        @content;
+    }
+}
+
+@mixin breakpoint-min($bp) {
+    @media (min-width: $bp) {
+        @content;
+    }
+}
+
+@mixin breakpoint-height($bp) {
+    @media (max-height: $bp) {
+        @content;
+    }
+}
+
+
+
+@mixin bg-cover {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin flex-h-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-w-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

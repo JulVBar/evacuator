@@ -1,40 +1,23 @@
+@import "~normalize.css";
 @import "vars";
-@import "zero";
+@import "mixin";
+@import "settings";
 @import "general";
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;0,700;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap');
 
 
 // Ctrl + Alt + X классы SCSS
 // Ctrl + Alt + C классы CSS
-
-
-html {
-    font-size: $main-text-size;
-}
-
-body {
-    background: $white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Jost', sans-serif, 'Open Sans', sans-serif, 'Raleway', sans-serif;
-
-    font-size: $main-text-size;
-    font-weight: 400;
-    color: $main-text;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-
-
-
-
+//прописываем background-image: url("./images/picture.jpg");
 
 /* Blocks */
-@import "blocks/page";
-@import "blocks/container";
+@import "components/header";
+@import "components/navigation";
+@import "components/social-icons";
+
+
+
+
 
 
 
