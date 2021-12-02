@@ -1,6 +1,7 @@
 
 import './styles/main.scss';
 import typingText from './js/typing-text';
+import counter from './js/counter';
 import one from './js/js1';
 import two from './js/js2';
 
@@ -12,6 +13,7 @@ window.addEventListener('DOMContentLoaded', function() {
     one();
     two();
     typingText();
+    counter();
 });
 
 // load all images

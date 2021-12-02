@@ -16,7 +16,18 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./styles/main.scss\");\n/* harmony import */ var _js_typing_text__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/typing-text */ \"./js/typing-text.js\");\n/* harmony import */ var _js_js1__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/js1 */ \"./js/js1.js\");\n/* harmony import */ var _js_js2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/js2 */ \"./js/js2.js\");\n\n\n\n\nconsole.log('Это файл APP.JS');\nwindow.addEventListener('DOMContentLoaded', function () {\n  (0,_js_js1__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  (0,_js_js2__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n  (0,_js_typing_text__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n}); // load all images\n//каждую подпапку импортируем отдельно (иконки просто копируются в конфиге)\n\nvar images = importAll(__webpack_require__(\"./images sync \\\\.(png|jpe?g|svg|gif)$\"));\nvar slider = importAll(__webpack_require__(\"./images/slider sync \\\\.(png|jpe?g|svg|gif)$\"));\n\nfunction importAll(r) {\n  var images = {};\n  r.keys().map(function (item, index) {\n    images[item.replace('./', '')] = r(item);\n  });\n  return images;\n}\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./styles/main.scss\");\n/* harmony import */ var _js_typing_text__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/typing-text */ \"./js/typing-text.js\");\n/* harmony import */ var _js_counter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/counter */ \"./js/counter.js\");\n/* harmony import */ var _js_js1__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/js1 */ \"./js/js1.js\");\n/* harmony import */ var _js_js2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/js2 */ \"./js/js2.js\");\n\n\n\n\n\nconsole.log('Это файл APP.JS');\nwindow.addEventListener('DOMContentLoaded', function () {\n  (0,_js_js1__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n  (0,_js_js2__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n  (0,_js_typing_text__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  (0,_js_counter__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n}); // load all images\n//каждую подпапку импортируем отдельно (иконки просто копируются в конфиге)\n\nvar images = importAll(__webpack_require__(\"./images sync \\\\.(png|jpe?g|svg|gif)$\"));\nvar slider = importAll(__webpack_require__(\"./images/slider sync \\\\.(png|jpe?g|svg|gif)$\"));\n\nfunction importAll(r) {\n  var images = {};\n  r.keys().map(function (item, index) {\n    images[item.replace('./', '')] = r(item);\n  });\n  return images;\n}\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./js/counter.js":
+/*!***********************!*\
+  !*** ./js/counter.js ***!
+  \***********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction counter() {\n  var counters = document.querySelectorAll('.counter__number');\n  var counterArea = document.querySelector('.counter');\n\n  var scrollAnimation = function scrollAnimation() {\n    var windowCenter = window.innerHeight + window.scrollY;\n    var scrollOffset = counterArea.offsetTop + counterArea.offsetHeight / 2;\n\n    if (windowCenter >= scrollOffset) {\n      if (cc < 2) {\n        counters.forEach(function (counter) {\n          animate(counter);\n        });\n      }\n    } else {\n      counterArea.classList.remove('animation-class');\n    }\n  };\n\n  var cc = 1;\n  scrollAnimation();\n  window.addEventListener('scroll', function () {\n    scrollAnimation();\n  });\n\n  function animate(counter) {\n    var value = +counter.getAttribute('count');\n    var time = 1500;\n    var step = 1;\n\n    if (value > 100) {\n      step = 116;\n    }\n\n    var n = 0;\n    var t = Math.round(time / (value / step));\n    var interval = setInterval(function () {\n      n = n + step;\n\n      if (n == value) {\n        clearInterval(interval);\n        cc = cc + 2;\n      }\n\n      counter.innerText = n;\n    }, t);\n  } //   let x = 9860;\n  //   for (let i = 1; i <= x; i++) {\n  //         if (x % i == 0) {\n  //             console.log(i);\n  //         }\n  //   }\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (counter);\n\n//# sourceURL=webpack:///./js/counter.js?");
 
 /***/ }),
 
@@ -27,7 +38,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction one() {\n  console.log('Это файл 1'); //много другого кода  - весь модуль\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (one);\n\n//# sourceURL=webpack:///./js/js1.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nfunction one() {}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (one);\n\n//# sourceURL=webpack:///./js/js1.js?");
 
 /***/ }),
 
@@ -72,17 +83,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/11.png\");\n\n//# sourceURL=webpack:///./images/11.png?");
-
-/***/ }),
-
-/***/ "./images/1626728700_26-kartinkin-com-p-tekstura-pokrishki-krasivo-27.jpg":
-/*!********************************************************************************!*\
-  !*** ./images/1626728700_26-kartinkin-com-p-tekstura-pokrishki-krasivo-27.jpg ***!
-  \********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/1626728700_26-kartinkin-com-p-tekstura-pokrishki-krasivo-27.jpg\");\n\n//# sourceURL=webpack:///./images/1626728700_26-kartinkin-com-p-tekstura-pokrishki-krasivo-27.jpg?");
 
 /***/ }),
 
@@ -185,17 +185,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
-/***/ "./images/762282658.jpg":
-/*!******************************!*\
-  !*** ./images/762282658.jpg ***!
-  \******************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/762282658.jpg\");\n\n//# sourceURL=webpack:///./images/762282658.jpg?");
-
-/***/ }),
-
 /***/ "./images/8.png":
 /*!**********************!*\
   !*** ./images/8.png ***!
@@ -204,6 +193,39 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/8.png\");\n\n//# sourceURL=webpack:///./images/8.png?");
+
+/***/ }),
+
+/***/ "./images/counter-bg — копия.jpg":
+/*!***************************************!*\
+  !*** ./images/counter-bg — копия.jpg ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/counter-bg — копия.jpg\");\n\n//# sourceURL=webpack:///./images/counter-bg_%E2%80%94_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg?");
+
+/***/ }),
+
+/***/ "./images/counter-bg.jpg":
+/*!*******************************!*\
+  !*** ./images/counter-bg.jpg ***!
+  \*******************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/counter-bg.jpg\");\n\n//# sourceURL=webpack:///./images/counter-bg.jpg?");
+
+/***/ }),
+
+/***/ "./images/counter-bg1.jpg":
+/*!********************************!*\
+  !*** ./images/counter-bg1.jpg ***!
+  \********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/counter-bg1.jpg\");\n\n//# sourceURL=webpack:///./images/counter-bg1.jpg?");
 
 /***/ }),
 
@@ -292,17 +314,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/hook.png\");\n\n//# sourceURL=webpack:///./images/hook.png?");
-
-/***/ }),
-
-/***/ "./images/intro.jpg":
-/*!**************************!*\
-  !*** ./images/intro.jpg ***!
-  \**************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/intro.jpg\");\n\n//# sourceURL=webpack:///./images/intro.jpg?");
 
 /***/ }),
 
@@ -542,7 +553,7 @@ eval("var map = {\n\t\"./ava.jpg\": \"./images/slider/ava.jpg\",\n\t\"./ditch.jp
   \**********************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./1.png\": \"./images/1.png\",\n\t\"./11.png\": \"./images/11.png\",\n\t\"./1626728700_26-kartinkin-com-p-tekstura-pokrishki-krasivo-27.jpg\": \"./images/1626728700_26-kartinkin-com-p-tekstura-pokrishki-krasivo-27.jpg\",\n\t\"./1627089128_4-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-4.jpg\": \"./images/1627089128_4-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-4.jpg\",\n\t\"./1627089137_19-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-19.jpg\": \"./images/1627089137_19-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-19.jpg\",\n\t\"./1627089153_25-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-25.jpg\": \"./images/1627089153_25-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-25.jpg\",\n\t\"./22.png\": \"./images/22.png\",\n\t\"./33.png\": \"./images/33.png\",\n\t\"./4.png\": \"./images/4.png\",\n\t\"./44.png\": \"./images/44.png\",\n\t\"./55.png\": \"./images/55.png\",\n\t\"./7.png\": \"./images/7.png\",\n\t\"./762282658.jpg\": \"./images/762282658.jpg\",\n\t\"./8.png\": \"./images/8.png\",\n\t\"./crossover.png\": \"./images/crossover.png\",\n\t\"./dfg.png\": \"./images/dfg.png\",\n\t\"./dfgd.png\": \"./images/dfgd.png\",\n\t\"./evacuator-24-spb-1.jpg\": \"./images/evacuator-24-spb-1.jpg\",\n\t\"./evacuator-24-spb.jpg\": \"./images/evacuator-24-spb.jpg\",\n\t\"./g.png\": \"./images/g.png\",\n\t\"./ghjghj.jpg\": \"./images/ghjghj.jpg\",\n\t\"./hook.png\": \"./images/hook.png\",\n\t\"./intro.jpg\": \"./images/intro.jpg\",\n\t\"./logo.png\": \"./images/logo.png\",\n\t\"./look.com.ua-100990.jpg\": \"./images/look.com.ua-100990.jpg\",\n\t\"./pngegg (1).png\": \"./images/pngegg (1).png\",\n\t\"./pngegg (10).png\": \"./images/pngegg (10).png\",\n\t\"./pngegg (11).png\": \"./images/pngegg (11).png\",\n\t\"./pngegg (2).png\": \"./images/pngegg (2).png\",\n\t\"./pngegg (4).png\": \"./images/pngegg (4).png\",\n\t\"./pngegg (8).png\": \"./images/pngegg (8).png\",\n\t\"./pngegg.png\": \"./images/pngegg.png\",\n\t\"./standard-car.png\": \"./images/standard-car.png\",\n\t\"./truck.jpg\": \"./images/truck.jpg\",\n\t\"./truck.png\": \"./images/truck.png\",\n\t\"./xoh.jpg\": \"./images/xoh.jpg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./images sync \\\\.(png|jpe?g|svg|gif)$\";\n\n//# sourceURL=webpack:///./images/_sync_nonrecursive_\\.(png%7Cjpe?");
+eval("var map = {\n\t\"./1.png\": \"./images/1.png\",\n\t\"./11.png\": \"./images/11.png\",\n\t\"./1627089128_4-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-4.jpg\": \"./images/1627089128_4-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-4.jpg\",\n\t\"./1627089137_19-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-19.jpg\": \"./images/1627089137_19-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-19.jpg\",\n\t\"./1627089153_25-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-25.jpg\": \"./images/1627089153_25-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-25.jpg\",\n\t\"./22.png\": \"./images/22.png\",\n\t\"./33.png\": \"./images/33.png\",\n\t\"./4.png\": \"./images/4.png\",\n\t\"./44.png\": \"./images/44.png\",\n\t\"./55.png\": \"./images/55.png\",\n\t\"./7.png\": \"./images/7.png\",\n\t\"./8.png\": \"./images/8.png\",\n\t\"./counter-bg — копия.jpg\": \"./images/counter-bg — копия.jpg\",\n\t\"./counter-bg.jpg\": \"./images/counter-bg.jpg\",\n\t\"./counter-bg1.jpg\": \"./images/counter-bg1.jpg\",\n\t\"./crossover.png\": \"./images/crossover.png\",\n\t\"./dfg.png\": \"./images/dfg.png\",\n\t\"./dfgd.png\": \"./images/dfgd.png\",\n\t\"./evacuator-24-spb-1.jpg\": \"./images/evacuator-24-spb-1.jpg\",\n\t\"./evacuator-24-spb.jpg\": \"./images/evacuator-24-spb.jpg\",\n\t\"./g.png\": \"./images/g.png\",\n\t\"./ghjghj.jpg\": \"./images/ghjghj.jpg\",\n\t\"./hook.png\": \"./images/hook.png\",\n\t\"./logo.png\": \"./images/logo.png\",\n\t\"./look.com.ua-100990.jpg\": \"./images/look.com.ua-100990.jpg\",\n\t\"./pngegg (1).png\": \"./images/pngegg (1).png\",\n\t\"./pngegg (10).png\": \"./images/pngegg (10).png\",\n\t\"./pngegg (11).png\": \"./images/pngegg (11).png\",\n\t\"./pngegg (2).png\": \"./images/pngegg (2).png\",\n\t\"./pngegg (4).png\": \"./images/pngegg (4).png\",\n\t\"./pngegg (8).png\": \"./images/pngegg (8).png\",\n\t\"./pngegg.png\": \"./images/pngegg.png\",\n\t\"./standard-car.png\": \"./images/standard-car.png\",\n\t\"./truck.jpg\": \"./images/truck.jpg\",\n\t\"./truck.png\": \"./images/truck.png\",\n\t\"./xoh.jpg\": \"./images/xoh.jpg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./images sync \\\\.(png|jpe?g|svg|gif)$\";\n\n//# sourceURL=webpack:///./images/_sync_nonrecursive_\\.(png%7Cjpe?");
 
 /***/ })
 

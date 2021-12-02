@@ -700,3 +700,34 @@ main {
 .advantages__tel {
   margin-right: 15px; }
 
+.counter {
+  background-image: url("./images/counter-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 0; }
+  .counter__area {
+    display: flex;
+    justify-content: center; }
+  .counter__item {
+    display: flex;
+    width: 25%;
+    padding: 25px; }
+  .counter__image {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px; }
+  .counter__content {
+    display: flex;
+    flex-direction: column; }
+  .counter__number {
+    font-size: 45px;
+    font-weight: 700;
+    color: white; }
+  .counter__text {
+    color: #f4bc33;
+    font-size: 12px; }
+
+.titles-test {
+  height: 1500px; }
+
