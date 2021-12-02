@@ -1,0 +1,75 @@
+.hero {
+    padding-bottom: 40px;
+    
+    background-image: url("./images/evacuator-24-spb-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    padding-top: 80px;
+
+    &__content {
+        width: 700px;
+        margin: 0 auto;
+        padding: 20px 0;
+        margin-bottom: 100px;
+        text-align: center;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+        /* background:rgba(216, 198, 54, 0.8); */
+    }
+
+    &__title {
+        color: $white;
+        font-family: $ff-title;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 35px;
+        letter-spacing: 3px;
+
+        &--under {
+            margin-bottom: 100px;
+        }
+    }
+
+    &__typing-text {
+        color: $secondary;
+        font-family: $ff-title;
+        font-size: 45px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 50px;
+        letter-spacing: 6px;
+    
+        display: flex;
+        justify-content: left;
+        margin: 5px 0;
+    
+        &--type {
+            background: linear-gradient(45deg, $secondary, rgb(221, 124, 14));
+            color: $white;
+            margin-left: 30px;
+            padding-left: 10px;
+    
+            &:after {
+                content: "|";
+                animation: blink ease 1s infinite;
+            }
+        }
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+    opacity: 0;
+    } 50% {
+    opacity: 1;
+    }
+}
+
+
+
+

@@ -1,0 +1,75 @@
+.tarif {
+    &__list {
+        display: flex;
+    justify-content: center;
+    width: 100%;
+    }
+
+    &__item {
+        width: 350px;
+        height: 150px;
+        background:rgba(29, 28, 26, 0.685);
+        padding: 20px 15px;
+        z-index: 1;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+
+        & img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            width: 1%;
+            height: 100%;
+            background: $secondary;
+            transition: all .2s ease;
+        }
+
+        &:hover::after {
+            width: 80%;
+        }
+        &:hover .tarif__text span {
+            color: $white;
+        }
+    }
+
+    &__content {
+        margin-left: 80px;
+    }
+
+    &__title {
+        color: $white;
+        font-size: $text;
+        font-weight: 600;
+        margin: 5px 0;
+
+        &--under {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__text {
+        color: $white;
+        font-size: $text;
+
+    & span {
+        color: $secondary;
+        font-weight: 700;
+        margin: 0 5px;
+        }
+    }
+}

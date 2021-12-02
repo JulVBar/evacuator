@@ -358,9 +358,7 @@ img {
 .page {
   overflow: hidden;
   display: flex;
-  flex-flow: column nowrap;
-  width: 100vw;
-  height: 100vh; }
+  flex-flow: column nowrap; }
 
 header {
   flex: 0 0 60px;
@@ -390,7 +388,7 @@ main {
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none; }
 
-.subtitle-2 {
+.big-title {
   color: white;
   font-family: "Jost", sans-serif;
   font-size: 25px;
@@ -399,7 +397,7 @@ main {
   line-height: 30px;
   letter-spacing: 6px; }
 
-.subtitle-3 {
+.medium-title {
   color: #f4bc33;
   font-family: "Jost", sans-serif;
   font-size: 15px;
@@ -408,7 +406,7 @@ main {
   line-height: 25px;
   letter-spacing: 3px; }
 
-.subtitle-4 {
+.small-title {
   color: white;
   font-family: "Jost", sans-serif;
   font-size: 15px;
@@ -506,4 +504,199 @@ main {
     transition: color .3s linear; }
     .social-icons__link:hover {
       color: #f4bc33; }
+
+.general-btn {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 40px;
+  text-transform: uppercase;
+  padding: 15px 25px;
+  border: 2px solid #f4bc33;
+  background-color: #f4bc33;
+  background-size: 30px 30px;
+  background-image: linear-gradient(135deg, #f4bc33 25%, transparent 25%, transparent 50%, #f4bc33 50%, #f4bc33 75%, transparent 75%, transparent);
+  transition: background-color .5s linear;
+  animation: animate-stripes 2s linear infinite;
+  animation-play-state: paused; }
+  .general-btn:hover {
+    background-color: rgba(95, 94, 94, 0.411);
+    animation-play-state: running; }
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 60px 0; } }
+
+.hero {
+  padding-bottom: 40px;
+  background-image: url("./images/evacuator-24-spb-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 80px; }
+  .hero__content {
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px 0;
+    margin-bottom: 100px;
+    text-align: center;
+    /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+    /* background:rgba(216, 198, 54, 0.8); */ }
+  .hero__title {
+    color: white;
+    font-family: "Jost", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 35px;
+    letter-spacing: 3px; }
+    .hero__title--under {
+      margin-bottom: 100px; }
+  .hero__typing-text {
+    color: #f4bc33;
+    font-family: "Jost", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 50px;
+    letter-spacing: 6px;
+    display: flex;
+    justify-content: left;
+    margin: 5px 0; }
+    .hero__typing-text--type {
+      background: linear-gradient(45deg, #f4bc33, #dd7c0e);
+      color: white;
+      margin-left: 30px;
+      padding-left: 10px; }
+      .hero__typing-text--type:after {
+        content: "|";
+        animation: blink ease 1s infinite; }
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+.tarif__list {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+
+.tarif__item {
+  width: 350px;
+  height: 150px;
+  background: rgba(29, 28, 26, 0.685);
+  padding: 20px 15px;
+  z-index: 1;
+  position: relative; }
+  .tarif__item:not(:last-child) {
+    margin-right: 25px; }
+  .tarif__item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; }
+  .tarif__item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 1%;
+    height: 100%;
+    background: #f4bc33;
+    transition: all .2s ease; }
+  .tarif__item:hover::after {
+    width: 80%; }
+  .tarif__item:hover .tarif__text span {
+    color: white; }
+
+.tarif__content {
+  margin-left: 80px; }
+
+.tarif__title {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 5px 0; }
+  .tarif__title--under {
+    margin-bottom: 30px; }
+
+.tarif__text {
+  color: white;
+  font-size: 15px; }
+  .tarif__text span {
+    color: #f4bc33;
+    font-weight: 700;
+    margin: 0 5px; }
+
+.benefit__list {
+  display: flex;
+  flex-wrap: wrap; }
+
+.benefit__item {
+  width: 50%;
+  text-align: center;
+  padding: 20px 15px; }
+
+.benefit__icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px; }
+
+.benefit__title {
+  margin-bottom: 10px; }
+
+.advantages__inner {
+  display: flex; }
+
+.advantages__content {
+  width: 50%;
+  padding: 40px; }
+
+.advantages__title {
+  margin-bottom: 30px; }
+  .advantages__title--upper {
+    margin-top: 20px; }
+
+.advantages__paragraph {
+  margin-bottom: 25px; }
+
+.advantages__signature {
+  text-align: right;
+  color: white;
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 12px;
+  letter-spacing: 2.2px;
+  margin-bottom: 20px; }
+
+.advantages__contacts {
+  display: flex;
+  justify-content: right;
+  font-size: 10px; }
+  .advantages__contacts a {
+    color: #b6b6b2;
+    transition: color .2s linaer; }
+    .advantages__contacts a:hover {
+      color: #f4bc33;
+      transition: color .2s linaer; }
+  .advantages__contacts i {
+    color: #f4bc33;
+    margin-right: 7px; }
+
+.advantages__tel {
+  margin-right: 15px; }
 

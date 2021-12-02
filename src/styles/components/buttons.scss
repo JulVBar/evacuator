@@ -1,0 +1,44 @@
+.general-btn {
+    color: $white;
+    font-family: $ff-main;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 40px;
+    text-transform: uppercase;
+    // text-shadow: -2px -2px 11px rgb(240, 236, 236); 
+    padding: 15px 25px;
+    border: 2px solid $secondary;
+    
+    background-color: $secondary;
+    background-size: 30px 30px;
+    background-image: linear-gradient(
+        135deg,
+        $secondary 25%,
+        transparent 25%,
+        transparent 50%,
+        $secondary 50%,
+        $secondary 75%,
+        transparent 75%,
+        transparent
+    );
+
+    transition: background-color .5s linear;
+    animation: animate-stripes 2s linear infinite;
+    animation-play-state: paused;
+
+    &:hover {
+        background-color: rgba(95, 94, 94, 0.411);   
+        animation-play-state: running;
+    }
+}
+
+@keyframes animate-stripes {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 60px 0;
+    }
+}

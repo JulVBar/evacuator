@@ -16,7 +16,7 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./styles/main.scss\");\n/* harmony import */ var _js_js1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/js1 */ \"./js/js1.js\");\n/* harmony import */ var _js_js2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/js2 */ \"./js/js2.js\");\n\n\n\nconsole.log('Это файл APP.JS');\nwindow.addEventListener('DOMContentLoaded', function () {\n  (0,_js_js1__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  (0,_js_js2__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n}); // load all images\n//каждую подпапку импортируем отдельно (иконки просто копируются в конфиге)\n\nvar images = importAll(__webpack_require__(\"./images sync \\\\.(png|jpe?g|svg|gif)$\"));\nvar slider = importAll(__webpack_require__(\"./images/slider sync \\\\.(png|jpe?g|svg|gif)$\"));\n\nfunction importAll(r) {\n  var images = {};\n  r.keys().map(function (item, index) {\n    images[item.replace('./', '')] = r(item);\n  });\n  return images;\n}\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./styles/main.scss\");\n/* harmony import */ var _js_typing_text__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/typing-text */ \"./js/typing-text.js\");\n/* harmony import */ var _js_js1__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/js1 */ \"./js/js1.js\");\n/* harmony import */ var _js_js2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/js2 */ \"./js/js2.js\");\n\n\n\n\nconsole.log('Это файл APP.JS');\nwindow.addEventListener('DOMContentLoaded', function () {\n  (0,_js_js1__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  (0,_js_js2__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n  (0,_js_typing_text__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n}); // load all images\n//каждую подпапку импортируем отдельно (иконки просто копируются в конфиге)\n\nvar images = importAll(__webpack_require__(\"./images sync \\\\.(png|jpe?g|svg|gif)$\"));\nvar slider = importAll(__webpack_require__(\"./images/slider sync \\\\.(png|jpe?g|svg|gif)$\"));\n\nfunction importAll(r) {\n  var images = {};\n  r.keys().map(function (item, index) {\n    images[item.replace('./', '')] = r(item);\n  });\n  return images;\n}\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -39,6 +39,28 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction one() {\n  console.l
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\nfunction two() {\n  console.log('Это файл 2'); //много другого кода  - весь модуль\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (two);\n\n//# sourceURL=webpack:///./js/js2.js?");
+
+/***/ }),
+
+/***/ "./js/typing-text.js":
+/*!***************************!*\
+  !*** ./js/typing-text.js ***!
+  \***************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction typingText() {\n  // get the element\n  var text = document.querySelector('.hero__typing-text--type'); // make a words array\n\n  var words = [\"быстро\", \"недорого\", \"круглосуточно\", \"надежно\"]; // start typing effect\n\n  setTyper(text, words);\n\n  function setTyper(element, words) {\n    var LETTER_TYPE_DELAY = 75;\n    var WORD_STAY_DELAY = 2000;\n    var DIRECTION_FORWARDS = 0;\n    var DIRECTION_BACKWARDS = 1;\n    var direction = DIRECTION_FORWARDS;\n    var wordIndex = 0;\n    var letterIndex = 0;\n    var wordTypeInterval;\n    startTyping();\n\n    function startTyping() {\n      wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY);\n    }\n\n    function typeLetter() {\n      var word = words[wordIndex];\n\n      if (direction == DIRECTION_FORWARDS) {\n        letterIndex++;\n\n        if (letterIndex == word.length) {\n          direction = DIRECTION_BACKWARDS;\n          clearInterval(wordTypeInterval);\n          setTimeout(startTyping, WORD_STAY_DELAY);\n        }\n      } else if (direction == DIRECTION_BACKWARDS) {\n        letterIndex--;\n\n        if (letterIndex == 0) {\n          nextWord();\n        }\n      }\n\n      var textToType = word.substring(0, letterIndex);\n      element.textContent = textToType;\n    }\n\n    function nextWord() {\n      letterIndex = 0;\n      direction = DIRECTION_FORWARDS;\n      wordIndex++;\n\n      if (wordIndex == words.length) {\n        wordIndex = 0;\n      }\n    }\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (typingText);\n\n//# sourceURL=webpack:///./js/typing-text.js?");
+
+/***/ }),
+
+/***/ "./images/1.png":
+/*!**********************!*\
+  !*** ./images/1.png ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/1.png\");\n\n//# sourceURL=webpack:///./images/1.png?");
 
 /***/ }),
 
@@ -119,14 +141,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
-/***/ "./images/3434.jpg":
-/*!*************************!*\
-  !*** ./images/3434.jpg ***!
-  \*************************/
+/***/ "./images/4.png":
+/*!**********************!*\
+  !*** ./images/4.png ***!
+  \**********************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/3434.jpg\");\n\n//# sourceURL=webpack:///./images/3434.jpg?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/4.png\");\n\n//# sourceURL=webpack:///./images/4.png?");
 
 /***/ }),
 
@@ -141,17 +163,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
-/***/ "./images/456456.jpg":
-/*!***************************!*\
-  !*** ./images/456456.jpg ***!
-  \***************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/456456.jpg\");\n\n//# sourceURL=webpack:///./images/456456.jpg?");
-
-/***/ }),
-
 /***/ "./images/55.png":
 /*!***********************!*\
   !*** ./images/55.png ***!
@@ -160,17 +171,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/55.png\");\n\n//# sourceURL=webpack:///./images/55.png?");
-
-/***/ }),
-
-/***/ "./images/5656.jpg":
-/*!*************************!*\
-  !*** ./images/5656.jpg ***!
-  \*************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/5656.jpg\");\n\n//# sourceURL=webpack:///./images/5656.jpg?");
 
 /***/ }),
 
@@ -196,17 +196,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
-/***/ "./images/8.jpg":
-/*!**********************!*\
-  !*** ./images/8.jpg ***!
-  \**********************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/8.jpg\");\n\n//# sourceURL=webpack:///./images/8.jpg?");
-
-/***/ }),
-
 /***/ "./images/8.png":
 /*!**********************!*\
   !*** ./images/8.png ***!
@@ -218,36 +207,69 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
-/***/ "./images/9.jpg":
-/*!**********************!*\
-  !*** ./images/9.jpg ***!
-  \**********************/
+/***/ "./images/crossover.png":
+/*!******************************!*\
+  !*** ./images/crossover.png ***!
+  \******************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/9.jpg\");\n\n//# sourceURL=webpack:///./images/9.jpg?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/crossover.png\");\n\n//# sourceURL=webpack:///./images/crossover.png?");
 
 /***/ }),
 
-/***/ "./images/Depositphotos_72747129_XL.jpg":
-/*!**********************************************!*\
-  !*** ./images/Depositphotos_72747129_XL.jpg ***!
-  \**********************************************/
+/***/ "./images/dfg.png":
+/*!************************!*\
+  !*** ./images/dfg.png ***!
+  \************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/Depositphotos_72747129_XL.jpg\");\n\n//# sourceURL=webpack:///./images/Depositphotos_72747129_XL.jpg?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/dfg.png\");\n\n//# sourceURL=webpack:///./images/dfg.png?");
 
 /***/ }),
 
-/***/ "./images/ccvg.jpg":
+/***/ "./images/dfgd.png":
 /*!*************************!*\
-  !*** ./images/ccvg.jpg ***!
+  !*** ./images/dfgd.png ***!
   \*************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/ccvg.jpg\");\n\n//# sourceURL=webpack:///./images/ccvg.jpg?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/dfgd.png\");\n\n//# sourceURL=webpack:///./images/dfgd.png?");
+
+/***/ }),
+
+/***/ "./images/evacuator-24-spb-1.jpg":
+/*!***************************************!*\
+  !*** ./images/evacuator-24-spb-1.jpg ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/evacuator-24-spb-1.jpg\");\n\n//# sourceURL=webpack:///./images/evacuator-24-spb-1.jpg?");
+
+/***/ }),
+
+/***/ "./images/evacuator-24-spb.jpg":
+/*!*************************************!*\
+  !*** ./images/evacuator-24-spb.jpg ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/evacuator-24-spb.jpg\");\n\n//# sourceURL=webpack:///./images/evacuator-24-spb.jpg?");
+
+/***/ }),
+
+/***/ "./images/g.png":
+/*!**********************!*\
+  !*** ./images/g.png ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/g.png\");\n\n//# sourceURL=webpack:///./images/g.png?");
 
 /***/ }),
 
@@ -292,17 +314,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/logo.png\");\n\n//# sourceURL=webpack:///./images/logo.png?");
-
-/***/ }),
-
-/***/ "./images/logo1.png":
-/*!**************************!*\
-  !*** ./images/logo1.png ***!
-  \**************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/logo1.png\");\n\n//# sourceURL=webpack:///./images/logo1.png?");
 
 /***/ }),
 
@@ -361,17 +372,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
-/***/ "./images/pngegg (3).png":
-/*!*******************************!*\
-  !*** ./images/pngegg (3).png ***!
-  \*******************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/pngegg (3).png\");\n\n//# sourceURL=webpack:///./images/pngegg_(3).png?");
-
-/***/ }),
-
 /***/ "./images/pngegg (4).png":
 /*!*******************************!*\
   !*** ./images/pngegg (4).png ***!
@@ -383,39 +383,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
-/***/ "./images/pngegg (5).png":
-/*!*******************************!*\
-  !*** ./images/pngegg (5).png ***!
-  \*******************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/pngegg (5).png\");\n\n//# sourceURL=webpack:///./images/pngegg_(5).png?");
-
-/***/ }),
-
-/***/ "./images/pngegg (6).png":
-/*!*******************************!*\
-  !*** ./images/pngegg (6).png ***!
-  \*******************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/pngegg (6).png\");\n\n//# sourceURL=webpack:///./images/pngegg_(6).png?");
-
-/***/ }),
-
-/***/ "./images/pngegg (7).png":
-/*!*******************************!*\
-  !*** ./images/pngegg (7).png ***!
-  \*******************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/pngegg (7).png\");\n\n//# sourceURL=webpack:///./images/pngegg_(7).png?");
-
-/***/ }),
-
 /***/ "./images/pngegg (8).png":
 /*!*******************************!*\
   !*** ./images/pngegg (8).png ***!
@@ -424,17 +391,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/pngegg (8).png\");\n\n//# sourceURL=webpack:///./images/pngegg_(8).png?");
-
-/***/ }),
-
-/***/ "./images/pngegg (9).png":
-/*!*******************************!*\
-  !*** ./images/pngegg (9).png ***!
-  \*******************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/pngegg (9).png\");\n\n//# sourceURL=webpack:///./images/pngegg_(9).png?");
 
 /***/ }),
 
@@ -515,6 +471,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
+/***/ "./images/standard-car.png":
+/*!*********************************!*\
+  !*** ./images/standard-car.png ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/standard-car.png\");\n\n//# sourceURL=webpack:///./images/standard-car.png?");
+
+/***/ }),
+
 /***/ "./images/truck.jpg":
 /*!**************************!*\
   !*** ./images/truck.jpg ***!
@@ -526,14 +493,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
-/***/ "./images/uiui.jpg":
-/*!*************************!*\
-  !*** ./images/uiui.jpg ***!
-  \*************************/
+/***/ "./images/truck.png":
+/*!**************************!*\
+  !*** ./images/truck.png ***!
+  \**************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/uiui.jpg\");\n\n//# sourceURL=webpack:///./images/uiui.jpg?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/truck.png\");\n\n//# sourceURL=webpack:///./images/truck.png?");
 
 /***/ }),
 
@@ -545,28 +512,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/xoh.jpg\");\n\n//# sourceURL=webpack:///./images/xoh.jpg?");
-
-/***/ }),
-
-/***/ "./images/Безымянный.jpg":
-/*!*******************************!*\
-  !*** ./images/Безымянный.jpg ***!
-  \*******************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/Безымянный.jpg\");\n\n//# sourceURL=webpack:///./images/%D0%91%D0%B5%D0%B7%D1%8B%D0%BC%D1%8F%D0%BD%D0%BD%D1%8B%D0%B9.jpg?");
-
-/***/ }),
-
-/***/ "./images/Безымянный1.jpg":
-/*!********************************!*\
-  !*** ./images/Безымянный1.jpg ***!
-  \********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"images/Безымянный1.jpg\");\n\n//# sourceURL=webpack:///./images/%D0%91%D0%B5%D0%B7%D1%8B%D0%BC%D1%8F%D0%BD%D0%BD%D1%8B%D0%B91.jpg?");
 
 /***/ }),
 
@@ -597,7 +542,7 @@ eval("var map = {\n\t\"./ava.jpg\": \"./images/slider/ava.jpg\",\n\t\"./ditch.jp
   \**********************************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./11.png\": \"./images/11.png\",\n\t\"./1626728700_26-kartinkin-com-p-tekstura-pokrishki-krasivo-27.jpg\": \"./images/1626728700_26-kartinkin-com-p-tekstura-pokrishki-krasivo-27.jpg\",\n\t\"./1627089128_4-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-4.jpg\": \"./images/1627089128_4-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-4.jpg\",\n\t\"./1627089137_19-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-19.jpg\": \"./images/1627089137_19-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-19.jpg\",\n\t\"./1627089153_25-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-25.jpg\": \"./images/1627089153_25-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-25.jpg\",\n\t\"./22.png\": \"./images/22.png\",\n\t\"./33.png\": \"./images/33.png\",\n\t\"./3434.jpg\": \"./images/3434.jpg\",\n\t\"./44.png\": \"./images/44.png\",\n\t\"./456456.jpg\": \"./images/456456.jpg\",\n\t\"./55.png\": \"./images/55.png\",\n\t\"./5656.jpg\": \"./images/5656.jpg\",\n\t\"./7.png\": \"./images/7.png\",\n\t\"./762282658.jpg\": \"./images/762282658.jpg\",\n\t\"./8.jpg\": \"./images/8.jpg\",\n\t\"./8.png\": \"./images/8.png\",\n\t\"./9.jpg\": \"./images/9.jpg\",\n\t\"./Depositphotos_72747129_XL.jpg\": \"./images/Depositphotos_72747129_XL.jpg\",\n\t\"./ccvg.jpg\": \"./images/ccvg.jpg\",\n\t\"./ghjghj.jpg\": \"./images/ghjghj.jpg\",\n\t\"./hook.png\": \"./images/hook.png\",\n\t\"./intro.jpg\": \"./images/intro.jpg\",\n\t\"./logo.png\": \"./images/logo.png\",\n\t\"./logo1.png\": \"./images/logo1.png\",\n\t\"./look.com.ua-100990.jpg\": \"./images/look.com.ua-100990.jpg\",\n\t\"./pngegg (1).png\": \"./images/pngegg (1).png\",\n\t\"./pngegg (10).png\": \"./images/pngegg (10).png\",\n\t\"./pngegg (11).png\": \"./images/pngegg (11).png\",\n\t\"./pngegg (2).png\": \"./images/pngegg (2).png\",\n\t\"./pngegg (3).png\": \"./images/pngegg (3).png\",\n\t\"./pngegg (4).png\": \"./images/pngegg (4).png\",\n\t\"./pngegg (5).png\": \"./images/pngegg (5).png\",\n\t\"./pngegg (6).png\": \"./images/pngegg (6).png\",\n\t\"./pngegg (7).png\": \"./images/pngegg (7).png\",\n\t\"./pngegg (8).png\": \"./images/pngegg (8).png\",\n\t\"./pngegg (9).png\": \"./images/pngegg (9).png\",\n\t\"./pngegg.png\": \"./images/pngegg.png\",\n\t\"./truck.jpg\": \"./images/truck.jpg\",\n\t\"./uiui.jpg\": \"./images/uiui.jpg\",\n\t\"./xoh.jpg\": \"./images/xoh.jpg\",\n\t\"./Безымянный.jpg\": \"./images/Безымянный.jpg\",\n\t\"./Безымянный1.jpg\": \"./images/Безымянный1.jpg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./images sync \\\\.(png|jpe?g|svg|gif)$\";\n\n//# sourceURL=webpack:///./images/_sync_nonrecursive_\\.(png%7Cjpe?");
+eval("var map = {\n\t\"./1.png\": \"./images/1.png\",\n\t\"./11.png\": \"./images/11.png\",\n\t\"./1626728700_26-kartinkin-com-p-tekstura-pokrishki-krasivo-27.jpg\": \"./images/1626728700_26-kartinkin-com-p-tekstura-pokrishki-krasivo-27.jpg\",\n\t\"./1627089128_4-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-4.jpg\": \"./images/1627089128_4-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-4.jpg\",\n\t\"./1627089137_19-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-19.jpg\": \"./images/1627089137_19-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-19.jpg\",\n\t\"./1627089153_25-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-25.jpg\": \"./images/1627089153_25-kartinkin-com-p-cherno-zheltaya-tekstura-krasivo-25.jpg\",\n\t\"./22.png\": \"./images/22.png\",\n\t\"./33.png\": \"./images/33.png\",\n\t\"./4.png\": \"./images/4.png\",\n\t\"./44.png\": \"./images/44.png\",\n\t\"./55.png\": \"./images/55.png\",\n\t\"./7.png\": \"./images/7.png\",\n\t\"./762282658.jpg\": \"./images/762282658.jpg\",\n\t\"./8.png\": \"./images/8.png\",\n\t\"./crossover.png\": \"./images/crossover.png\",\n\t\"./dfg.png\": \"./images/dfg.png\",\n\t\"./dfgd.png\": \"./images/dfgd.png\",\n\t\"./evacuator-24-spb-1.jpg\": \"./images/evacuator-24-spb-1.jpg\",\n\t\"./evacuator-24-spb.jpg\": \"./images/evacuator-24-spb.jpg\",\n\t\"./g.png\": \"./images/g.png\",\n\t\"./ghjghj.jpg\": \"./images/ghjghj.jpg\",\n\t\"./hook.png\": \"./images/hook.png\",\n\t\"./intro.jpg\": \"./images/intro.jpg\",\n\t\"./logo.png\": \"./images/logo.png\",\n\t\"./look.com.ua-100990.jpg\": \"./images/look.com.ua-100990.jpg\",\n\t\"./pngegg (1).png\": \"./images/pngegg (1).png\",\n\t\"./pngegg (10).png\": \"./images/pngegg (10).png\",\n\t\"./pngegg (11).png\": \"./images/pngegg (11).png\",\n\t\"./pngegg (2).png\": \"./images/pngegg (2).png\",\n\t\"./pngegg (4).png\": \"./images/pngegg (4).png\",\n\t\"./pngegg (8).png\": \"./images/pngegg (8).png\",\n\t\"./pngegg.png\": \"./images/pngegg.png\",\n\t\"./standard-car.png\": \"./images/standard-car.png\",\n\t\"./truck.jpg\": \"./images/truck.jpg\",\n\t\"./truck.png\": \"./images/truck.png\",\n\t\"./xoh.jpg\": \"./images/xoh.jpg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./images sync \\\\.(png|jpe?g|svg|gif)$\";\n\n//# sourceURL=webpack:///./images/_sync_nonrecursive_\\.(png%7Cjpe?");
 
 /***/ })
 

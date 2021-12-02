@@ -1,0 +1,59 @@
+.advantages {
+    &__inner {
+        display: flex;
+    }
+
+    &__content {
+        width: 50%;
+        padding: 40px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+
+        &--upper {
+            margin-top: 20px;
+        }
+    }
+
+    &__paragraph {
+        margin-bottom: 25px;
+    }
+
+    &__signature {
+        text-align: right;
+        color: $white;
+        font-family: $ff-title;
+        font-size: $small-text;
+        font-weight: 600;
+        text-transform: capitalize;
+        line-height: 12px;
+        letter-spacing: 2.2px;
+        margin-bottom: 20px;
+    }
+
+    &__contacts {
+        display: flex;
+        justify-content: right;
+        font-size: 10px;
+        
+        a {
+            color: $color-text;
+            transition: color .2s linaer;
+
+            &:hover {
+                color: $secondary;
+                transition: color .2s linaer;
+            }
+        }
+
+        i {
+            color: $secondary;
+            margin-right: 7px;
+        }
+    }
+
+    &__tel {
+        margin-right: 15px;
+    }
+}

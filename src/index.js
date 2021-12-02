@@ -1,14 +1,17 @@
 
 import './styles/main.scss';
+import typingText from './js/typing-text';
 import one from './js/js1';
-
 import two from './js/js2';
+
+
 
 console.log('Это файл APP.JS');
 
 window.addEventListener('DOMContentLoaded', function() {
     one();
     two();
+    typingText();
 });
 
 // load all images
