@@ -15,10 +15,6 @@ function counter() {
                         animate(counter);
                     });
                 }
-				
-
-			} else {
-				counterArea.classList.remove('animation-class');
 			}
 		
 	};
