@@ -1,0 +1,16 @@
+.stars {
+    &__list {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    &__item {
+        color: rgb(224, 181, 38);
+        font-size: 12px;
+
+        &:not(:last-child) {
+            margin-right: 3px;
+        }
+    }
+}

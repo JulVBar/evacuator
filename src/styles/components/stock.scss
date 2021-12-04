@@ -1,0 +1,97 @@
+.stock {
+    height: 400px;
+
+    &__inner {
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__content {
+        width: 50%;
+        overflow: hidden;
+
+        &--offer {
+            background-image: url("./images/evacuator-24-spb-1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &--calc {
+            background-image: url("./images/evacuator-24-spb-1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__calc {
+        padding: 30px 0;
+    }
+
+    &__title {
+        letter-spacing: 3px;
+        margin-bottom: 30px;
+        flex: 1 1 auto;
+    }
+
+    &__text {
+        color: $white;
+        margin-bottom: 60px;
+    }
+
+}
+
+.offer {
+    width: 50%;
+    margin-left: auto;
+    background: linear-gradient(135deg, $orange  0%, $secondary 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+
+    transform: skew(-20deg);
+    padding: 30px 120px 30px 0;
+    margin-right: -75px;
+    
+
+    &__wrap {
+        transform: skew(20deg);
+        align-items: right;
+    }
+
+    &__btn {
+        
+    }
+
+    &__tag {
+        color: $white;
+        font-size: 60px;
+        line-height: 70px;
+        letter-spacing: 4px;
+        font-weight: 700;
+    }
+
+    &__text {
+        color: $black;
+        font-size: 18px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    &__special {
+        color: $white;
+        font-size: 25px;
+        letter-spacing: 3px;
+        font-weight: 700;
+        line-height: 30px;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+}
