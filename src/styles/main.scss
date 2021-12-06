@@ -5,6 +5,10 @@
 @import "general";
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap');
 
+  // import Swiper styles
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 
 // Ctrl + Alt + X классы SCSS
 // Ctrl + Alt + C классы CSS
@@ -23,7 +27,11 @@
 @import "components/call-to-action";
 @import "components/testimonials";
 @import "components/star-rate";
-@import "components/stock";
+@import "components/sale-offer";
+@import "components/galery-swiper";
+@import "components/faq";
+@import "components/footer";
+@import "components/amoeba-social";
 
 
 

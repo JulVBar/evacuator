@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+
+    &__inner {
+        width: 100%;
+        flex: 1 1 auto;
+        position: relative;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__social {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding-left: 50px;
+    }
+
+    &__column {
+        width: 25%;
+        @include flex-all-center;
+        height: 150px;
+        background: rgb(98, 156, 211);
+
+        &--above-amoeba-social {
+            padding-bottom: 60px;
+        }
+    }
+
+    &__copyright {
+        @include flex-all-center;
+        background: $dark-grey;
+        width: 100%;
+        height: 25px;
+        font-size: 10px;
+    }
+}
+
+

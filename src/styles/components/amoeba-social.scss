@@ -1,0 +1,70 @@
+.amoeba-social {
+    position: relative;
+    z-index: 100;
+    width: 236px;
+    height: 54px;
+
+    &__svg {
+        height: 54px;
+        left: 0;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 236px;
+        z-index: -10;
+    }
+
+    &__path {
+        fill: $dark-grey;
+    }
+
+    &__list {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+    }
+
+    &__link {
+        color: $grey;
+        transition: color .3s linear;
+
+        &--yellow {
+            color: $secondary;
+        }
+    }
+
+    &__item {
+        position: absolute;
+        cursor: pointer;
+        bottom: 0;
+
+        &:hover .amoeba-social__link {
+            color: $secondary;
+        }
+
+        &:hover .amoeba-social__link--yellow {
+            color: $white;
+        }
+
+        &--first {
+            left: 12px;
+            bottom: 5px;
+            font-size: 20px;
+        }
+        &--second {
+            left: 72px;
+            bottom: 10px;
+            font-size: 25px;
+        }
+        &--third {
+            left: 135px;
+            bottom: 7px;
+            font-size: 20px;
+        }
+        &--fourth {
+            left: 188px;
+            bottom: 7px;
+            font-size: 25px;
+        }
+    }
+}

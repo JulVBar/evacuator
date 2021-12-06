@@ -1,0 +1,103 @@
+.faq {
+    text-align: center;
+    padding: 30px 0;
+
+    background-image: url("./images/bg-wave.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__wrapper {
+        margin-bottom: 45px;
+    }
+
+    &__list {
+        margin: 0 auto;
+        width: 60%;
+        text-align: left;
+    }
+
+    &__item {
+        margin: 10px 0;
+    }
+
+    &__header {
+        background: #1a1a1a7a;
+        padding: 10px;
+        position: relative;
+        cursor: pointer;
+        transition: color .2s linear;
+
+        &:after,
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            z-index: 1;
+            width: 15px;
+            height: 2px;
+            background: $secondary;
+        }
+
+        &:after {
+            transform: translateY(-50%);
+        }
+
+        &:before {
+            transform: translateY(-50%) rotate(90deg);
+            transition: transform .2s linear;
+        }
+
+        &.active:before {
+            transform: translateY(-50%) rotate(0deg);
+        }
+
+        &.active {
+            color: $secondary;
+        }
+    }
+
+    &__body {
+        padding: 20px 10px;
+        background: #1a1a1a48;
+        display: none;
+
+        li {
+            position: relative;
+            margin: 5px 0;
+            padding-left: 10px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) rotate(-45deg);
+                left: 0;
+                z-index: 1;
+                width: 4px;
+                height: 4px;
+                background: $secondary;
+            }
+        }
+    }
+
+    &__buttons {
+        margin: 0 auto;
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn {
+        min-width: 230px;
+        border: 2px solid $white;
+        
+
+        &--dark {
+            background: $dark-grey;
+            color: $secondary;
+            border: 2px solid $secondary;
+        }
+    }
+}
