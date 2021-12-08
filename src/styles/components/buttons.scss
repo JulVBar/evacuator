@@ -1,28 +1,28 @@
 .general-btn {
     display: inline-block;
     margin: 0 auto;
-    color: $white;
-    font-family: $ff-main;
+    color: $primary;
+    font-family: $ff-title;
     font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
     line-height: 30px;
     text-transform: uppercase;
-    // text-shadow: -2px -2px 11px rgb(240, 236, 236); 
+    // text-shadow: -2px -2px 7px rgba(0, 0, 0, 0.452); 
     padding: 5px 20px;
     border: 2px solid $secondary;
     
-    background-color: $secondary;
+    // background-color: $secondary;
     background-size: 30px 30px;
     background-image: linear-gradient(
         135deg,
         $secondary 25%,
-        transparent 25%,
-        transparent 50%,
+        $secondary-2 25%,
+        $secondary-2 50%,
         $secondary 50%,
         $secondary 75%,
-        transparent 75%,
-        transparent
+        $secondary-2 75%,
+        $secondary-2
     );
 
     transition: background-color .5s linear;
@@ -30,7 +30,7 @@
     animation-play-state: paused;
 
     &:hover {
-        background-color: rgba(95, 94, 94, 0.411);   
+        // background-color: rgba(95, 94, 94, 0.411);   
         animation-play-state: running;
     }
 }

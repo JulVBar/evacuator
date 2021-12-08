@@ -367,8 +367,7 @@ header {
 
 footer {
   flex: 0 0 100px;
-  background-color: #1a1a1a;
-  border-top: 1px solid grey; }
+  background-color: #1a1a1a; }
 
 main {
   flex: 1 1 auto; }
@@ -451,7 +450,7 @@ main {
   letter-spacing: 6px; }
 
 .medium-title {
-  color: #f4bc33;
+  color: #e6b028;
   font-family: "Jost", sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -818,11 +817,11 @@ button.swiper-pagination-bullet {
     letter-spacing: 2px;
     transition: color .3s linear; }
     .header__tel:hover {
-      color: #f4bc33; }
+      color: #e6b028; }
   .header__devider {
     width: 100%;
     height: 3px;
-    background-image: linear-gradient(-45deg, transparent 10%, #f4bc33 10%, #f4bc33 50%, transparent 50%, transparent 60%, #f4bc33 60%, #f4bc33);
+    background-image: linear-gradient(-45deg, transparent 10%, #e6b028 10%, #e6b028 50%, transparent 50%, transparent 60%, #e6b028 60%, #e6b028);
     background-size: 7px 7px; }
 
 .nav__list {
@@ -850,14 +849,14 @@ button.swiper-pagination-bullet {
     bottom: -5px;
     width: 0;
     height: 2px;
-    background: #f4bc33;
+    background: #e6b028;
     transition: all 0.3s linear; }
   .nav__link:hover {
-    color: #f4bc33; }
+    color: #e6b028; }
   .nav__link:hover::after {
     width: 100%; }
   .nav__link.active {
-    color: #f4bc33; }
+    color: #e6b028; }
 
 .social-icons {
   margin-right: 40px; }
@@ -872,28 +871,26 @@ button.swiper-pagination-bullet {
     position: relative;
     transition: color .3s linear; }
     .social-icons__link:hover {
-      color: #f4bc33; }
+      color: #e6b028; }
 
 .general-btn {
   display: inline-block;
   margin: 0 auto;
-  color: white;
-  font-family: "Open Sans", sans-serif;
+  color: #1a1a1a;
+  font-family: "Jost", sans-serif;
   font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   line-height: 30px;
   text-transform: uppercase;
   padding: 5px 20px;
-  border: 2px solid #f4bc33;
-  background-color: #f4bc33;
+  border: 2px solid #e6b028;
   background-size: 30px 30px;
-  background-image: linear-gradient(135deg, #f4bc33 25%, transparent 25%, transparent 50%, #f4bc33 50%, #f4bc33 75%, transparent 75%, transparent);
+  background-image: linear-gradient(135deg, #e6b028 25%, #f4bc33 25%, #f4bc33 50%, #e6b028 50%, #e6b028 75%, #f4bc33 75%, #f4bc33);
   transition: background-color .5s linear;
   animation: animate-stripes 2s linear infinite;
   animation-play-state: paused; }
   .general-btn:hover {
-    background-color: rgba(95, 94, 94, 0.411);
     animation-play-state: running; }
 
 @keyframes animate-stripes {
@@ -930,7 +927,7 @@ button.swiper-pagination-bullet {
     .hero__title--under {
       margin-bottom: 100px; }
   .hero__typing-text {
-    color: #f4bc33;
+    color: #e6b028;
     font-family: "Jost", sans-serif;
     font-size: 45px;
     font-weight: 700;
@@ -941,7 +938,7 @@ button.swiper-pagination-bullet {
     justify-content: left;
     margin: 5px 0; }
     .hero__typing-text--type {
-      background: linear-gradient(45deg, #f4bc33, #dd7c0e);
+      background: linear-gradient(45deg, #e6b028, #dd7c0e);
       color: white;
       margin-left: 30px;
       padding-left: 10px; }
@@ -963,7 +960,7 @@ button.swiper-pagination-bullet {
 .tarif__item {
   width: 350px;
   height: 150px;
-  background: rgba(29, 28, 26, 0.685);
+  background: rgba(29, 28, 26, 0.801);
   padding: 20px 15px;
   z-index: 1;
   position: relative; }
@@ -985,7 +982,7 @@ button.swiper-pagination-bullet {
     z-index: -1;
     width: 1%;
     height: 100%;
-    background: linear-gradient(45deg, #f4bc33, #dd7c0e);
+    background: linear-gradient(45deg, #e6b028, #dd7c0e);
     transition: all .2s ease; }
   .tarif__item:hover::after {
     width: 80%; }
@@ -1007,7 +1004,7 @@ button.swiper-pagination-bullet {
   color: white;
   font-size: 15px; }
   .tarif__text span {
-    color: #f4bc33;
+    color: #e6b028;
     font-weight: 700;
     margin: 0 5px; }
 
@@ -1062,10 +1059,10 @@ button.swiper-pagination-bullet {
     color: #b6b6b2;
     transition: color .2s linaer; }
     .advantages__contacts a:hover {
-      color: #f4bc33;
+      color: #e6b028;
       transition: color .2s linaer; }
   .advantages__contacts i {
-    color: #f4bc33;
+    color: #e6b028;
     margin-right: 7px; }
 
 .advantages__tel {
@@ -1096,11 +1093,11 @@ button.swiper-pagination-bullet {
     font-weight: 700;
     color: white; }
   .counter__text {
-    color: #f4bc33;
+    color: #e6b028;
     font-size: 12px; }
 
 .bg-corner {
-  background: linear-gradient(135deg, #dd7c0e 0%, #f4bc33 100%);
+  background: linear-gradient(135deg, #dd7c0e 0%, #e6b028 100%);
   position: absolute;
   z-index: -1000;
   bottom: -105%;
@@ -1112,6 +1109,9 @@ button.swiper-pagination-bullet {
 
 .call-to-action:hover .bg-corner {
   transform: rotate(15deg); }
+
+.call-to-action:hover .call-to-action__title {
+  color: white; }
 
 .call-to-action {
   width: 100%;
@@ -1141,7 +1141,8 @@ button.swiper-pagination-bullet {
       margin-right: 40px; }
   .call-to-action__title {
     margin-bottom: 20px;
-    color: #f4bc33; }
+    color: #e6b028;
+    transition: all .4s linear; }
   .call-to-action__subtitle {
     margin-bottom: 60px; }
   .call-to-action__image {
@@ -1197,7 +1198,7 @@ button.swiper-pagination-bullet {
     flex: 1 1 auto; }
   .testimonials__name {
     margin-bottom: 5px;
-    color: #f4bc33; }
+    color: #e6b028; }
   .testimonials__date {
     font-size: 12px; }
 
@@ -1261,14 +1262,16 @@ button.swiper-pagination-bullet {
   object-fit: cover; }
 
 .faq {
+  margin-bottom: 50px;
   text-align: center;
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 80px;
   background-image: url("./images/bg-wave.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
   .faq__wrapper {
-    margin-bottom: 45px; }
+    margin-bottom: 55px; }
   .faq__list {
     margin: 0 auto;
     width: 60%;
@@ -1289,7 +1292,7 @@ button.swiper-pagination-bullet {
       z-index: 1;
       width: 15px;
       height: 2px;
-      background: #f4bc33; }
+      background: #e6b028; }
     .faq__header:after {
       transform: translateY(-50%); }
     .faq__header:before {
@@ -1298,7 +1301,7 @@ button.swiper-pagination-bullet {
     .faq__header.active:before {
       transform: translateY(-50%) rotate(0deg); }
     .faq__header.active {
-      color: #f4bc33; }
+      color: #e6b028; }
   .faq__body {
     padding: 20px 10px;
     background: #1a1a1a48;
@@ -1316,7 +1319,7 @@ button.swiper-pagination-bullet {
         z-index: 1;
         width: 4px;
         height: 4px;
-        background: #f4bc33; }
+        background: #e6b028; }
   .faq__buttons {
     margin: 0 auto;
     width: 60%;
@@ -1324,11 +1327,11 @@ button.swiper-pagination-bullet {
     justify-content: space-between; }
   .faq__btn {
     min-width: 230px;
-    border: 2px solid white; }
+    border: 2px solid #e6b028; }
     .faq__btn--dark {
       background: #333333;
-      color: #f4bc33;
-      border: 2px solid #f4bc33; }
+      color: #e6b028;
+      border: 2px solid #e6b028; }
 
 .footer {
   display: flex;
@@ -1339,20 +1342,54 @@ button.swiper-pagination-bullet {
     position: relative;
     display: flex;
     justify-content: space-between; }
+  .footer__column {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 10px; }
+    .footer__column--above-amoeba-social {
+      padding-bottom: 60px; }
+  .footer__nav {
+    flex-direction: column;
+    align-items: flex-start; }
+    .footer__nav li {
+      padding: 10px 0; }
+      .footer__nav li a {
+        text-transform: none; }
+  .footer__title {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 10px; }
+  .footer__recent-post {
+    padding: 10px 0; }
+    .footer__recent-post a {
+      font-weight: 600;
+      font-size: 10px;
+      color: #808080;
+      letter-spacing: 2px;
+      line-height: 12px;
+      position: relative;
+      transition: color .3s linear; }
+      .footer__recent-post a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 2px;
+        background: #e6b028;
+        transition: all 0.3s linear; }
+      .footer__recent-post a:hover {
+        color: #e6b028; }
+      .footer__recent-post a:hover::after {
+        width: 100%; }
+      .footer__recent-post a.active {
+        color: #e6b028; }
   .footer__social {
     position: absolute;
     left: 0;
     bottom: 0;
     padding-left: 50px; }
-  .footer__column {
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-    background: #629cd3; }
-    .footer__column--above-amoeba-social {
-      padding-bottom: 60px; }
   .footer__copyright {
     display: flex;
     align-items: center;
@@ -1385,13 +1422,13 @@ button.swiper-pagination-bullet {
     color: #808080;
     transition: color .3s linear; }
     .amoeba-social__link--yellow {
-      color: #f4bc33; }
+      color: #e6b028; }
   .amoeba-social__item {
     position: absolute;
     cursor: pointer;
     bottom: 0; }
     .amoeba-social__item:hover .amoeba-social__link {
-      color: #f4bc33; }
+      color: #e6b028; }
     .amoeba-social__item:hover .amoeba-social__link--yellow {
       color: white; }
     .amoeba-social__item--first {
@@ -1410,4 +1447,36 @@ button.swiper-pagination-bullet {
       left: 188px;
       bottom: 7px;
       font-size: 25px; }
+
+.contacts__item {
+  padding: 10px 0;
+  display: flex;
+  align-items: center; }
+
+.contacts__link {
+  font-weight: 600;
+  font-size: 10px;
+  color: #808080;
+  letter-spacing: 2px;
+  line-height: 12px;
+  position: relative;
+  transition: color .3s linear; }
+  .contacts__link:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #e6b028;
+    transition: all 0.3s linear; }
+  .contacts__link:hover {
+    color: #e6b028; }
+  .contacts__link:hover::after {
+    width: 100%; }
+  .contacts__link.active {
+    color: #e6b028; }
+  .contacts__link i {
+    margin-right: 5px;
+    color: #e6b028; }
 
