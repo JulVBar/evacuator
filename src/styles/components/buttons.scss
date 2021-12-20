@@ -1,46 +1,76 @@
+// .general-btn {
+//     display: inline-block;
+//     margin: 0 auto;
+//     color: $primary;
+//     font-family: $ff-title;
+//     font-size: 13px;
+//     font-weight: 700;
+//     letter-spacing: 0.5px;
+//     line-height: 30px;
+//     text-transform: uppercase;
+//     // text-shadow: -2px -2px 7px rgba(0, 0, 0, 0.452); 
+//     padding: 5px 20px;
+//     border: 2px solid $secondary;
+    
+//     // background-color: $secondary;
+//     background-size: 30px 30px;
+//     background-image: linear-gradient(
+//         135deg,
+//         $secondary 25%,
+//         $secondary-2 25%,
+//         $secondary-2 50%,
+//         $secondary 50%,
+//         $secondary 75%,
+//         $secondary-2 75%,
+//         $secondary-2
+//     );
+
+//     transition: background-color .5s linear;
+//     animation: animate-stripes 2s linear infinite;
+//     animation-play-state: paused;
+
+//     &:hover {
+//         // background-color: rgba(95, 94, 94, 0.411);   
+//         animation-play-state: running;
+//     }
+// }
+
+// @keyframes animate-stripes {
+//     0% {
+//         background-position: 0 0;
+//     }
+
+//     100% {
+//         background-position: 60px 0;
+//     }
+// }
+
+
 .general-btn {
     display: inline-block;
     margin: 0 auto;
-    color: $primary;
+    color: $white;
     font-family: $ff-title;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.5px;
     line-height: 30px;
     text-transform: uppercase;
-    // text-shadow: -2px -2px 7px rgba(0, 0, 0, 0.452); 
-    padding: 5px 20px;
-    border: 2px solid $secondary;
-    
-    // background-color: $secondary;
-    background-size: 30px 30px;
-    background-image: linear-gradient(
-        135deg,
-        $secondary 25%,
-        $secondary-2 25%,
-        $secondary-2 50%,
-        $secondary 50%,
-        $secondary 75%,
-        $secondary-2 75%,
-        $secondary-2
-    );
 
-    transition: background-color .5s linear;
-    animation: animate-stripes 2s linear infinite;
-    animation-play-state: paused;
+    padding: 5px 20px;
+    border-radius: 5px;
+
+    background-size: 30px 30px;
+    background: $gradient;
+    @include simple-shadow(#0000007e);
+
+    transition: all .2s linear;
 
     &:hover {
-        // background-color: rgba(95, 94, 94, 0.411);   
-        animation-play-state: running;
-    }
+        color: #fff;
+        box-shadow: 0 0 5px $orange,
+                    0 0 25px $orange,
+                    0 0 40px $orange,
+            }
 }
 
-@keyframes animate-stripes {
-    0% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: 60px 0;
-    }
-}

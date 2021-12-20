@@ -1,60 +1,67 @@
 .tarif {
     &__list {
         display: flex;
-    justify-content: center;
-    width: 100%;
+        justify-content: center;
+        width: 100%;
     }
 
     &__item {
         width: 350px;
         height: 150px;
         background:rgba(29, 28, 26, 0.801);
-        padding: 20px 15px;
-        z-index: 1;
+        border-radius: 5px;
+        @include simple-shadow(#0000007e);
+        display: flex;
+        align-items: center;
         position: relative;
 
         &:not(:last-child) {
             margin-right: 25px;
-        }
+        } 
+    }
 
-        & img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 10px;
-        }
+    &__picture {
+        object-fit: contain;
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -10%;
+        width: 150px;
+        height: 100px;
+    }
+
+    &__romb {
+        width: 90px;
+        height: 90px;
+        border-radius: 5px;
+        background: rgba(230, 176, 40, 0.3);
+        @include flex-all-center;
+        transform: rotate(45deg);
+        position: relative;
 
         &:after {
             content: "";
             position: absolute;
-            top: 0;
-            right: 0;
-            z-index: -1;
-            width: 1%;
-            height: 100%;
-            background: $gradient;
-            transition: all .2s ease;
-        }
-
-        &:hover::after {
-            width: 80%;
-        }
-        &:hover .tarif__text span {
-            color: $white;
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 70%;
+            height: 70%;
+            border-radius: 5px;
+            background: $orange;
+            @include simple-shadow($orange);
         }
     }
 
     &__content {
-        margin-left: 80px;
+        padding-left: 35px;
     }
 
     &__title {
         color: $white;
         font-size: $text;
-        font-weight: 600;
+        font-weight: 400;
         margin: 5px 0;
 
         &--under {

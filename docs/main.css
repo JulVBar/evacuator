@@ -319,7 +319,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #b6b6b2;
-  font-size: 15px; }
+  font-size: 14px; }
 
 *,
 *:before,
@@ -461,7 +461,7 @@ main {
 .small-title {
   color: white;
   font-family: "Jost", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 2px;
@@ -876,7 +876,7 @@ button.swiper-pagination-bullet {
 .general-btn {
   display: inline-block;
   margin: 0 auto;
-  color: #1a1a1a;
+  color: white;
   font-family: "Jost", sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -884,20 +884,14 @@ button.swiper-pagination-bullet {
   line-height: 30px;
   text-transform: uppercase;
   padding: 5px 20px;
-  border: 2px solid #e6b028;
+  border-radius: 5px;
   background-size: 30px 30px;
-  background-image: linear-gradient(135deg, #e6b028 25%, #f4bc33 25%, #f4bc33 50%, #e6b028 50%, #e6b028 75%, #f4bc33 75%, #f4bc33);
-  transition: background-color .5s linear;
-  animation: animate-stripes 2s linear infinite;
-  animation-play-state: paused; }
+  background: linear-gradient(45deg, #e6b028, #dd7c0e);
+  box-shadow: 0 0 5px 1px #0000007e;
+  transition: all .2s linear; }
   .general-btn:hover {
-    animation-play-state: running; }
-
-@keyframes animate-stripes {
-  0% {
-    background-position: 0 0; }
-  100% {
-    background-position: 60px 0; } }
+    color: #fff;
+    box-shadow: 0 0 5px #dd7c0e, 0 0 25px #dd7c0e, 0 0 40px #dd7c0e; }
 
 .hero {
   padding-bottom: 40px;
@@ -961,48 +955,60 @@ button.swiper-pagination-bullet {
   width: 350px;
   height: 150px;
   background: rgba(29, 28, 26, 0.801);
-  padding: 20px 15px;
-  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px #0000007e;
+  display: flex;
+  align-items: center;
   position: relative; }
   .tarif__item:not(:last-child) {
     margin-right: 25px; }
-  .tarif__item img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px; }
-  .tarif__item:after {
+
+.tarif__picture {
+  object-fit: contain;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -10%;
+  width: 150px;
+  height: 100px; }
+
+.tarif__romb {
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
+  background: rgba(230, 176, 40, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+  position: relative; }
+  .tarif__romb:after {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    width: 1%;
-    height: 100%;
-    background: linear-gradient(45deg, #e6b028, #dd7c0e);
-    transition: all .2s ease; }
-  .tarif__item:hover::after {
-    width: 80%; }
-  .tarif__item:hover .tarif__text span {
-    color: white; }
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+    background: #dd7c0e;
+    box-shadow: 0 0 5px 1px #dd7c0e; }
 
 .tarif__content {
-  margin-left: 80px; }
+  padding-left: 35px; }
 
 .tarif__title {
   color: white;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 400;
   margin: 5px 0; }
   .tarif__title--under {
     margin-bottom: 30px; }
 
 .tarif__text {
   color: white;
-  font-size: 15px; }
+  font-size: 14px; }
   .tarif__text span {
     color: #e6b028;
     font-weight: 700;
@@ -1069,7 +1075,7 @@ button.swiper-pagination-bullet {
   margin-right: 15px; }
 
 .counter {
-  background-image: url("./images/counter-bg.jpg");
+  background-image: url("./images/counter-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1106,12 +1112,6 @@ button.swiper-pagination-bullet {
   height: 150%;
   transform: rotate(-15deg);
   transition: all .4s linear; }
-
-.call-to-action:hover .bg-corner {
-  transform: rotate(15deg); }
-
-.call-to-action:hover .call-to-action__title {
-  color: white; }
 
 .call-to-action {
   width: 100%;
@@ -1155,11 +1155,7 @@ button.swiper-pagination-bullet {
 
 .testimonials {
   position: relative;
-  overflow: hidden;
-  background-image: url("./images/triangle-bg.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 780px 600px; }
+  overflow: hidden; }
   .testimonials__container {
     z-index: 100; }
   .testimonials__inner {
@@ -1214,27 +1210,39 @@ button.swiper-pagination-bullet {
     margin-right: 3px; }
 
 .sale-offer {
-  padding: 50px 0; }
+  background-image: url("./images/sale-offer-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  margin: 30px 0; }
   .sale-offer__inner {
-    display: flex; }
+    display: flex;
+    background-image: url("./images/bg-conus.svg");
+    background-position: left;
+    background-size: 720px 700px;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden; }
+  .sale-offer__dots {
+    width: 750px;
+    height: 100px;
+    position: absolute;
+    z-index: 0;
+    bottom: -45px;
+    left: 40px;
+    background-image: url("./images/dots.svg");
+    background-position: center;
+    background-size: fill;
+    background-repeat: no-repeat; }
   .sale-offer__content {
     width: 50%;
-    text-align: center;
-    padding: 50px 0; }
-    .sale-offer__content--left {
-      border-radius: 5px;
-      background-image: url("./images/sale-offer-bg.jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 700px 600px; }
-    .sale-offer__content--right {
-      background-image: url("./images/sale-offer-bg-yellow.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 700px 300px;
-      box-shadow: 0px 0px 25px 0px black;
-      border-radius: 5px;
-      margin-left: -5px; }
+    padding: 50px 0;
+    text-align: center; }
+    .sale-offer__content span {
+      padding: 0px 10px 0px 10px;
+      border-radius: 25px 0px 25px 0px;
+      background: #dd7c0e; }
   .sale-offer__title {
     letter-spacing: 3px;
     margin-bottom: 30px; }

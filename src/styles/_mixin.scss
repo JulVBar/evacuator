@@ -1,3 +1,11 @@
+@mixin simple-shadow($color) {
+    box-shadow: 0 0 5px 1px $color;
+}
+
+
+
+
+
 @mixin breakpoint($bp) {
     @media (max-width: $bp) {
         @content;
