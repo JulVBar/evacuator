@@ -93,13 +93,17 @@
 
     &__btn {
         min-width: 230px;
-        border: 2px solid $secondary;
-        
 
         &--dark {
             background: $dark-grey;
             color: $secondary;
-            border: 2px solid $secondary;
+
+            &:hover {
+                box-shadow: 0 0 5px $dark-grey,
+                            0 0 25px $dark-grey,
+                            0 0 40px $dark-grey;
+                
+            }
         }
     }
 }

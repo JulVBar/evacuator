@@ -1,0 +1,221 @@
+.calculating {
+
+
+    &__title {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &__choose {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    &__choose-item {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+
+        @include simple-shadow($dark-grey);
+        width: 220px;
+        height: 80px;
+        margin: 8px 15px;
+        padding-right: 20px;
+        padding-left: 80px;
+        background: $dark-grey;
+        background-image: url("./images/light-avto.png");
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: 120px 50px;
+        background-position-x: -40px;
+        text-align: right;
+        color: $secondary;
+        cursor: pointer;
+        transition: .3s all;
+
+        &:hover {
+            background-position-x: -20px;
+        }
+
+    }
+
+    &__choose-item_active {
+        color: $black;
+        background-color: $secondary;
+        background-position-x: -20px;
+    }
+
+
+    &__insert {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    
+    &__box {
+        width: 20%;
+        min-width: 175px;
+        padding: 20px;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: $dark-grey;
+        
+        @include simple-shadow($dark-grey);
+
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+
+    &__box-subtitle {
+        color: $secondary;
+    }
+
+    &__input-kilo {
+        width: 200px;
+        height: 40px;
+        padding: 5px;
+        text-align: center;
+        background: $dark-grey;
+        color: $secondary;
+        outline: none;
+        border: 1px solid $secondary;
+    }
+
+
+    &__checkbox {
+        display: none;
+    }
+    
+    &__checkbox:checked + .calculating__label::after {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    
+    &__label {
+        display: inline-flex;
+        width: 100%;
+        color: $secondary;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    &__label:before {
+        content: "";
+        align-self: center;
+        flex: 0 0 15px;
+        height: 15px;
+        background-color: $dark-grey;
+        border-radius: 5px;
+        border: 1px solid $grey;
+        margin-right: 10px;
+    }
+    
+    &__label:after {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        background: $secondary;
+        border-radius: 5px;
+        transform: scale(0);
+        transition: transform .3s ease;
+    }  
+    
+    &__steering {
+        justify-content: left;
+        padding: 20px 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.counter {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.counter-item {
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    border: .5px solid rgb(255, 255, 255);
+    font-size: 25px;
+    color: rgb(80, 81, 82);
+    font-weight: 700;
+    border-radius: 10%;
+}
+
+.sign {
+    background-color: #05ac9e;
+    cursor: pointer;
+}
+
+.calculating #daynight:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 30px;
+}
+
+.calculating__note {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    border-top: 1px solid #3dd7cb;
+    padding-top: 15px;
+}
+
+.calculating__total {
+    width: 50%;
+    margin: 10px auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-top: 2px solid #3dd7cb;
+}
+
+.calculating__result {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.calculating__result span {
+    font-size: 42px;
+    padding-left: 20px;
+}

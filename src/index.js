@@ -4,6 +4,7 @@ import typingText from './js/typing-text';
 import counter from './js/counter';
 import parallaxBGBlock from './js/parallax-bg';
 import testimonialsTabs from './js/testimonials-tabs';
+import calculate from './js/calculator';
 import galerySwiper from './js/galery-swiper';
 import one from './js/js1';
 import two from './js/js2';
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', function() {
     parallaxBGBlock();
     testimonialsTabs();
     galerySwiper();
+    calculate();
 });
 
 // load all images
