@@ -1,0 +1,52 @@
+.contacts-page {
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 100px;
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__hook {
+        width: 100px;
+        height: 100px;
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__content {
+        display: flex;
+
+        position: relative;
+    }
+
+    &__contacts {
+        width: 50%;
+        padding: 30px;
+        background: $dark-grey;
+    }
+
+    &__map {
+        margin-bottom: 30px;
+
+        iframe {
+            height: 200px;
+            width: 100%;
+        }
+    }
+
+    &__form {
+        width: 50%;
+        padding: 30px;
+        background: radial-gradient(at center top, rgba(244,188,51,1) 30%, rgba(221,124,14,1) 74%);
+        @include flex-all-center;
+    }
+}
+
+
+
+
+
