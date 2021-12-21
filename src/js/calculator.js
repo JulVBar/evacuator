@@ -1,6 +1,8 @@
 
 function calculate() {
-    const result = document.querySelector('.calculating__result span'),
+
+
+        const result = document.querySelector('.calculating__result span'),
         calculatingCheckboxs = document.querySelectorAll('.calculating__checkbox'),
         ditchBox = document.getElementById('ditch'),
         steerBox = document.getElementById('steer'),
@@ -169,6 +171,8 @@ function calculate() {
         calcTotal();
     });
 
+    
+    
 
 }
 

@@ -1,7 +1,7 @@
 .sale-offer {
-        background-image: url("./images/sale-offer-bg.jpg");
+        background-image: url("./images/sale-offer-bg.svg");
         background-repeat: no-repeat;
-        background-position: left;
+        background-position: bottom;
         background-size: cover;
 
 
@@ -9,31 +9,9 @@
 
     &__inner {
         display: flex;
-        
-        background-image: url("./images/bg-conus.svg");
-        background-position: left;
-        background-size: 720px 700px;
-        background-repeat: no-repeat;
-
         border-radius: 5px;
-
         position: relative;
         overflow: hidden;
-    }
-
-    &__dots {
-        width: 750px;
-        height: 100px;
-
-        position: absolute;
-        z-index: 0;
-        bottom: -45px;
-        left: 40px;
-
-        background-image: url("./images/dots.svg");
-        background-position: center;
-        background-size: fill;
-        background-repeat: no-repeat;
     }
 
     &__content {
@@ -44,13 +22,14 @@
         span {
             padding: 0px 10px 0px 10px;
             border-radius: 25px 0px 25px 0px;
-            background: $orange;
+            background: linear-gradient(45deg, $orange, $secondary);
+            @include simple-shadow($dark-grey);
         }
     }
 
     &__title {
         letter-spacing: 3px;
-        margin-bottom: 30px;
+        margin-bottom: 80px;
 
         span {
             font-size: 50px;

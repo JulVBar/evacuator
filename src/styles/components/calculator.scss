@@ -1,5 +1,11 @@
 .calculating {
+    margin-top: 50px;
+    margin-bottom: 100px;
 
+    background-image: url("./images/romb-bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &__title {
         margin-bottom: 30px;
@@ -31,11 +37,11 @@
         padding-right: 20px;
         padding-left: 80px;
         background: $dark-grey;
-        background-image: url("./images/light-avto.png");
         background-position: left;
         background-repeat: no-repeat;
         background-size: 120px 50px;
         background-position-x: -40px;
+        border-radius: 5px;
         text-align: right;
         color: $secondary;
         cursor: pointer;
@@ -62,13 +68,14 @@
     }
     
     &__box {
-        width: 20%;
-        min-width: 175px;
-        padding: 20px;
-
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+
+        width: 20%;
+        min-width: 175px;
+        padding: 20px;
+        border-radius: 5px;
         background-color: $dark-grey;
         
         @include simple-shadow($dark-grey);
@@ -91,8 +98,8 @@
         color: $secondary;
         outline: none;
         border: 1px solid $secondary;
+        border-radius: 5px;
     }
-
 
     &__checkbox {
         display: none;
@@ -110,6 +117,10 @@
         align-items: center;
         position: relative;
         cursor: pointer;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
     }
     
     &__label:before {
@@ -126,7 +137,7 @@
     &__label:after {
         content: "";
         position: absolute;
-        top: 11px;
+        top: 0;
         left: 0;
         width: 15px;
         height: 15px;
@@ -140,6 +151,125 @@
         justify-content: left;
         padding: 20px 10px;
     }
+
+    &__counter {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__counter-item {
+        text-align: center;
+        width: 35px;
+        height: 35px;
+        border: .5px solid $secondary;
+        font-size: 25px;
+        color: $white;
+        font-weight: 700;
+        border-radius: 5px;
+    }
+
+    &__sign {
+        background-color: $dark-grey;
+        cursor: pointer;
+        transition: background .2s ease;
+
+        &:hover {
+            background: $secondary;
+        }
+    }
+    
+    &__total {
+        width: 50%;
+        margin: 10px auto;
+        @include flex-all-center;
+        flex-wrap: wrap;
+        border-top: 2px solid $orange;
+        padding: 15px 0;
+    }
+    
+    &__result {
+        font-size: 18px;
+        @include flex-all-center;
+        padding-left: 15px;
+        color: $white;
+    }
+
+    &__result span {
+        font-size: 25px;
+        margin-right: 10px;
+    }
+
+    &__note {
+        font-size: 10px;
+        text-align: center;
+        margin-top: 10px;
+        border-top: 1px solid $orange;
+        padding-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__phone {
+        @include flex-all-center;
+        padding-right: 25px;
+        padding-left: 10px;
+        border: 1px solid $dark-grey;
+        border-radius: 5px;
+        color: $secondary;
+    }
+
+    &__button {
+        margin-left: -12px;
+    }
+
+}
+
+#moto {
+    background-image: url("./images/calculator/moto.png");
+    background-size: 120px 70px;
+}
+
+#light-car {
+    background-image: url("./images/calculator/light-car.png");
+}
+
+#cross {
+    background-image: url("./images/calculator/cross.png");
+}
+
+#jip {
+    background-image: url("./images/calculator/jip.png");
+}
+
+#minivan {
+    background-image: url("./images/calculator/minivan.png");
+}
+
+#special {
+    background-image: url("./images/calculator/special.png");
+    background-size: 100px 60px;
+}
+
+#van {
+    background-image: url("./images/calculator/van.png");
+}
+
+#truck {
+    background-image: url("./images/calculator/truck.png");
+}
+
+#day {
+    background-image: url("./images/calculator/day.svg");
+    background-size: 100px 90px;
+}
+
+#night {
+    background-image: url("./images/calculator/night.svg");
+    background-size: 100px 90px;
 }
 
 
@@ -147,75 +277,3 @@
 
 
 
-
-
-
-
-.counter {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.counter-item {
-    text-align: center;
-    width: 35px;
-    height: 35px;
-    border: .5px solid rgb(255, 255, 255);
-    font-size: 25px;
-    color: rgb(80, 81, 82);
-    font-weight: 700;
-    border-radius: 10%;
-}
-
-.sign {
-    background-color: #05ac9e;
-    cursor: pointer;
-}
-
-.calculating #daynight:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    display: block;
-    width: 16px;
-    height: 16px;
-    margin-bottom: 30px;
-}
-
-.calculating__note {
-    font-size: 12px;
-    text-align: center;
-    margin-top: 10px;
-    border-top: 1px solid #3dd7cb;
-    padding-top: 15px;
-}
-
-.calculating__total {
-    width: 50%;
-    margin: 10px auto;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border-top: 2px solid #3dd7cb;
-}
-
-.calculating__result {
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 20px;
-    padding-left: 20px;
-}
-
-.calculating__result span {
-    font-size: 42px;
-    padding-left: 20px;
-}

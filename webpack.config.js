@@ -65,6 +65,22 @@ module.exports = {
                 removeComments: isProd 
             }
         }),
+        new HTMLWebpackPlugin({    // Подключаем каждую страницу отдельно, обязательно указываем filename
+            filename: 'calculator.html',
+            template: './calculator.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
+        new HTMLWebpackPlugin({    // Подключаем каждую страницу отдельно, обязательно указываем filename
+            filename: 'contacts.html',
+            template: './contacts.html', 
+            minify: {
+                collapseWhitespace: isProd, 
+                removeComments: isProd 
+            }
+        }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [

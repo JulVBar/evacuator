@@ -58,11 +58,14 @@
     text-transform: uppercase;
 
     padding: 5px 20px;
+    border: none;
     border-radius: 5px;
 
     background-size: 30px 30px;
     background: $gradient;
     @include simple-shadow(#0000007e);
+
+    cursor: pointer;
 
     transition: all .2s linear;
 

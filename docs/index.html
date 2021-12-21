@@ -35,9 +35,9 @@
             <nav class="nav">
                 <ul class="nav__list list-reset">
                     <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Расчет стоимости</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Новости</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                    <li class="nav__item"><a href="calculator.html" class="nav__link">Расчет стоимости</a></li>
+                    <li class="nav__item"><a href="blog.html" class="nav__link">Новости</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
                 </ul>
             </nav>
             <div class="social-icons">
@@ -55,7 +55,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="home-page">
 
         <section class="hero">
             <div class="container">
@@ -67,7 +67,7 @@
                     </div>
                     <h1 class="hero__title hero__title--under">В САНКТ-ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ ОБЛАСТИ</h1>
 
-                    <a href="#" class="hero__btn general-btn">Вызвать эвакуатор</a>
+                    <a href="tel:+78129756060" class="hero__btn general-btn">Вызвать эвакуатор</a>
                 </div> <!--hero__content-->
 
                 <div class="tarif">
@@ -164,7 +164,7 @@
                     <div class="call-to-action__content call-to-action__content--main">
                         <h2 class="call-to-action__title big-title">Нужна помощь на дороге?</h2>
                         <h3 class="call-to-action__subtitle small-title">Звони! Мы готовы помочь в любое время!</h3>
-                        <a href="#" class="call-to-action__btn general-btn">Вызвать эвакуатор</a>
+                        <a href="tel:+78129756060" class="call-to-action__btn general-btn">Вызвать эвакуатор</a>
                     </div>
                     <div class="call-to-action__content">
                         <img class="call-to-action__image" src="images/evac8.png" alt="">
@@ -341,12 +341,7 @@
             <div class="sale-offer__inner">
                 <div class="sale-offer__content">
                     <h3 class="sale-offer__title big-title"> <span>-10%</span> на первый заказ</h3>
-                    <a href="#" class="general-btn">Заказать эвакуатор</a>
-                </div>
-
-                <div class="sale-offer__content">
-                    <h3 class="sale-offer__title big-title">Рассчитать стоимость заказа</h3>
-                    <a href="#" class="general-btn">Расcчитать стоимость</a>
+                    <a href="tel:+78129756060" class="general-btn">Заказать эвакуатор</a>
                 </div>
             </div>
         </section>
@@ -425,78 +420,12 @@
                     </ul>
                 </div>
                 <div class="faq__buttons">
-                    <a href="#" class="general-btn faq__btn">Вызвать эвакуатор</a>
-                    <a href="#" class="general-btn faq__btn faq__btn--dark">Расcчитать стоимость</a>
+                    <a href="tel:+78129756060" class="general-btn faq__btn">Вызвать эвакуатор</a>
+                    <a href="contacts.html" class="general-btn faq__btn faq__btn--dark">Связаться с нами</a>
                 </div>
             </div>
         </section>
 
-        <section class="calculating" id="calculating">
-            <div class="container"> 
-                    
-                    <h3 class="calculating__title medium-title">Сколько это стоит?</h3>
-                    <h2 class="calculating__title big-title">Расчет стоимости вывоза эвакуатором</h2>
-                        
-                    <div class="calculating__inner">
-                        <div class="calculating__subtitle small-title">
-                            Выберите тип автомобиля
-                        </div>
-                        <ul class="calculating__choose calculating__choose__car list-reset">
-                            <li data-tarif="1" data-fix="2000" data-price="50" class="calculating__choose-item">Мотоцикл </li>
-                            <li data-tarif="2" data-fix="2000" data-price="50" class="calculating__choose-item calculating__choose-item_active">Легковой автомобиль</li>
-                            <li data-tarif="3" data-fix="2500" data-price="60" class="calculating__choose-item">Кроссовер</li>
-                            <li data-tarif="4" data-fix="2500" data-price="60" class="calculating__choose-item">Внедорожник</li>
-                            <li data-tarif="5" data-fix="2500" data-price="60" class="calculating__choose-item">Минивэн</li>
-                            <li data-tarif="6" data-fix="2500" data-price="60" class="calculating__choose-item">Мини спецтехника</li>
-                            <li data-tarif="7" data-fix="2500" data-price="60" class="calculating__choose-item">Микроавтобус</li>
-                            <li data-tarif="8" data-fix="3000" data-price="70" class="calculating__choose-item">Грузовой автомобиль</li>
-                        </ul>
-                        <div class="calculating__subtitle small-title">
-                            Выберите дополнительные опции
-                        </div>
-                        <ul class="calculating__insert list-reset">
-                            <li class="calculating__box">
-                                <div class="calculating__box-subtitle">Расстояние (км)*</div>
-                                <input class="calculating__input-kilo" type="text" id="kilo" placeholder="Введите расстояние">
-                            </li>
-                            <li class="calculating__box calculating__steering">   
-                                
-                                <input type="checkbox" class="calculating__checkbox" id="ditch">
-                                <label for="ditch" class="calculating__label">Сложность погрузки</label>
-                            
-                                <input type="checkbox" class="calculating__checkbox" id="steer">
-                                <label for="steer" class="calculating__label">Блокировка руля</label>      
-                            
-                                <input type="checkbox" class="calculating__checkbox" id="preoder">
-                                <label for="preoder" class="calculating__label">Предварительный заказ</label>
-                                
-                            </li>
-                            <li class="calculating__box">
-                                <div class="calculating__box-subtitle">Заблокированных колёс</div>
-                                <div class="counter">
-                                    <div class="counter-item sign" id="minus">-</div>
-                                    <div class="counter-item" id="wheelnumber">0</div>
-                                    <div class="counter-item sign" id="plus">+</div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="calculating__subtitle small-title">Выберите время суток</div>
-                        <div class="calculating__choose" id="daynight">
-                            <div id="night" class="calculating__choose-item">Ночь </div>
-                            <div id="day" class="calculating__choose-item calculating__choose-item_active">День</div>
-                        </div>
-                        <div class="calculating__total">
-                            <div class="calculating__subtitle">
-                                Расчетная стоимость:
-                            </div>
-                            <div class="calculating__result">
-                                <span>200</span> руб.
-                            </div>
-                        </div>
-                        <div class="calculating__note">*Cтоимость является ориентировочной и может меняться в зависимости от фактических условий и сложности работ. Уточняйте стоимость у диспетчера по номеру +7 (812) 975-60-60</div>
-                    </div><!--calculating__inner-->
-                </div><!--container-->
-        </section>
     </main> <!--main-->
 
     <footer class="footer">

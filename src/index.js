@@ -14,14 +14,19 @@ import two from './js/js2';
 console.log('Это файл APP.JS');
 
 window.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('#home-page')) {
+        typingText();
+        counter();
+        parallaxBGBlock();
+        testimonialsTabs();
+        galerySwiper();
+    }
+    if (document.querySelector('#calculating-page')) {
+        calculate();
+    }
+    
     one();
     two();
-    typingText();
-    counter();
-    parallaxBGBlock();
-    testimonialsTabs();
-    galerySwiper();
-    calculate();
 });
 
 // load all images
@@ -29,6 +34,8 @@ window.addEventListener('DOMContentLoaded', function() {
 const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg|gif)$/));
 const dalery = importAll(require.context('./images/galery', false, /\.(png|jpe?g|svg|gif)$/));
 const testimonials = importAll(require.context('./images/testimonials', false, /\.(png|jpe?g|svg|gif)$/));
+const caclulator = importAll(require.context('./images/calculator', false, /\.(png|jpe?g|svg|gif)$/));
+
 
 function importAll(r) {
     let images = {};
