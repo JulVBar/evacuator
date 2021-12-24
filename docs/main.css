@@ -979,23 +979,13 @@ button.swiper-pagination-bullet {
   width: 90px;
   height: 90px;
   border-radius: 5px;
-  background: rgba(230, 176, 40, 0.3);
+  background: rgba(230, 176, 40, 0.9);
+  box-shadow: 0 0 5px 1px #e6b028;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: rotate(45deg);
   position: relative; }
-  .tarif__romb:after {
-    content: "";
-    position: absolute;
-    z-index: 10;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 70%;
-    height: 70%;
-    border-radius: 5px;
-    background: #dd7c0e;
-    box-shadow: 0 0 5px 1px #dd7c0e; }
 
 .tarif__content {
   padding-left: 35px; }
@@ -1077,7 +1067,7 @@ button.swiper-pagination-bullet {
   margin-right: 15px; }
 
 .counter {
-  background-image: url("./images/counter-bg.svg");
+  background-image: url("./images/background/counter-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1158,7 +1148,7 @@ button.swiper-pagination-bullet {
 .testimonials {
   position: relative;
   overflow: hidden;
-  background-image: url("./images/romb-bg.svg");
+  background-image: url("./images/background/romb-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -1216,7 +1206,7 @@ button.swiper-pagination-bullet {
     margin-right: 3px; }
 
 .sale-offer {
-  background-image: url("./images/sale-offer-bg.svg");
+  background-image: url("./images/background/sale-offer-bg.svg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -1266,7 +1256,7 @@ button.swiper-pagination-bullet {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 80px;
-  background-image: url("./images/bg-wave.svg");
+  background-image: url("./images/background/bg-wave.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -1360,6 +1350,8 @@ button.swiper-pagination-bullet {
     text-transform: uppercase;
     font-weight: 400;
     font-size: 10px; }
+  .footer__posts {
+    padding-right: 30px; }
   .footer__recent-post {
     padding: 10px 0; }
     .footer__recent-post a {
@@ -1528,7 +1520,7 @@ button.swiper-pagination-bullet {
 .calculating {
   margin-top: 50px;
   margin-bottom: 100px;
-  background-image: url("./images/romb-bg.svg");
+  background-image: url("./images/background/romb-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -1853,4 +1845,157 @@ button.swiper-pagination-bullet {
 
 #item-email:after {
   background-image: url("./images/icon/mail.svg"); }
+
+.post {
+  padding-bottom: 100px;
+  background-image: url("./images/background/post-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  .post__main-title {
+    padding: 50px 0;
+    text-align: center; }
+  .post__container {
+    display: flex; }
+  .post__column {
+    width: 30%; }
+    .post__column:not(:last-child) {
+      margin-right: 45px; }
+  .post__article {
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px #333333;
+    background: #1a1a1a; }
+    .post__article:not(:last-child) {
+      margin-bottom: 45px; }
+  .post__header {
+    margin-bottom: 15px;
+    cursor: pointer; }
+    .post__header img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 5px;
+      pointer-events: none;
+      transform: scale(1);
+      transition: transform .4s ease; }
+    .post__header:hover img {
+      transform: scale(1.2); }
+  .post__image {
+    overflow: hidden;
+    display: block;
+    height: 280px;
+    margin-bottom: 15px; }
+  .post__title {
+    margin-bottom: 15px;
+    padding-left: 20px; }
+  .post__body {
+    padding: 0 20px; }
+  .post__meta {
+    margin-bottom: 10px;
+    color: #808080; }
+  .post__category {
+    color: #808080;
+    transition: color .2s ease; }
+    .post__category:hover {
+      color: #e6b028; }
+  .post__content {
+    padding-bottom: 15px; }
+  .post__text {
+    margin-bottom: 15px; }
+  .post__link-more {
+    color: #e6b028;
+    transition: color .2s ease; }
+    .post__link-more:hover {
+      color: white; }
+  .post__pagination {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between; }
+    .post__pagination a {
+      color: #808080;
+      transition: .2s ease; }
+      .post__pagination a:hover {
+        color: #e6b028; }
+
+.single-post {
+  padding: 50px 0; }
+  .single-post__image {
+    width: 100%;
+    margin: 20px 0; }
+    .single-post__image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block; }
+  .single-post__article {
+    background: #1a1a1a; }
+  .single-post__title {
+    margin-bottom: 20px; }
+
+.preloader {
+  background-color: #1a1a1a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+  opacity: 1;
+  visibility: visible;
+  transition: .2s ease-in-out; }
+  .preloader.done {
+    opacity: 0;
+    visibility: hidden; }
+  .preloader.done body {
+    overflow-y: visible; }
+
+.loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 70px;
+  height: 70px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #dd7c0e;
+  animation: spin 2s linear infinite; }
+
+.loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #e6b028;
+  animation: spin 3s linear infinite; }
+
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #dd7c0e;
+  animation: spin 1.5s linear infinite; }
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 

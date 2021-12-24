@@ -35,23 +35,11 @@
         width: 90px;
         height: 90px;
         border-radius: 5px;
-        background: rgba(230, 176, 40, 0.3);
+        background: rgba(230, 176, 40, 0.9);
+        @include simple-shadow($secondary);
         @include flex-all-center;
         transform: rotate(45deg);
         position: relative;
-
-        &:after {
-            content: "";
-            position: absolute;
-            z-index: 10;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 70%;
-            height: 70%;
-            border-radius: 5px;
-            background: $orange;
-            @include simple-shadow($orange);
-        }
     }
 
     &__content {
