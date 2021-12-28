@@ -77,3 +77,73 @@
             }
 }
 
+
+
+
+.button-fixed {
+    position: fixed;
+    z-index: 100;
+}
+
+.button-to-top {
+    right: 8px;
+    bottom: 8px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0);
+    transition: transform .3s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.button-top {
+    border-radius: 5px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    opacity: .6;
+
+    i {
+        font-size: 35px;
+        color: $white;
+    }      
+}
+
+.button__whatsapp {
+    right: 85px;
+    bottom: 15px;
+
+    a {
+        font-size: 40px;
+        color: #43d854;
+        background: white;
+        border-radius: 50%;
+        padding: 10px;
+
+        @include flex-all-center;
+
+        animation: ripple 2s linear infinite;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+}
+
+@keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(white, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 0 15px rgba(white, 0);
+    }
+  }

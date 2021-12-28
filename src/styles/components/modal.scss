@@ -1,0 +1,136 @@
+.modal {
+
+    &.modal-open{
+        .modal__container {
+            transform:scaleY(.01) scaleX(0);
+            animation:unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+
+        .modal__content {
+            transform:scale(0);
+            animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+    }
+
+    &.modal-close {
+        .modal__container {
+            transform:scale(1);
+        animation:unfoldOut 1s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+    
+        .modal__content  {
+            animation: zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+    }
+
+    &__container {
+        position:fixed;
+        display:table;
+        height:100%;
+        width:100%;
+        top:0;
+        left:0;
+        transform:scale(0);
+        z-index:1000;
+        @include simple-shadow($primary);
+    }
+
+    &__background {
+        display:table-cell;
+        background:#1a1a1ad2;
+        text-align:center;
+        vertical-align:middle;
+    }
+
+    &__content {
+        background: $dark-grey;
+        padding: 50px 30px;
+        display:inline-block;
+        border-radius: 3px;
+        position: relative;
+    }
+
+    &__close-svg {
+        margin: 5px;
+        width: 30px;
+        height: 30px;
+        position:absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        transition: transform .6s ease;
+
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+
+    &__title {
+        color: $white;
+        margin-bottom:25px;
+    }
+
+    &__svg {
+        position:absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius:3px;
+        pointer-events: none;
+
+        rect {
+            stroke: $primary;
+            stroke-width: 2px;
+            stroke-dasharray: 778;
+            stroke-dashoffset: 778;
+        }
+    }
+}
+
+
+
+
+
+
+@keyframes unfoldIn {
+    0% {
+    transform:scaleY(.005) scaleX(0);
+    }
+    50% {
+    transform:scaleY(.005) scaleX(1);
+    }
+    100% {
+    transform:scaleY(1) scaleX(1);
+    }
+}
+
+@keyframes unfoldOut {
+    0% {
+    transform:scaleY(1) scaleX(1);
+    }
+    50% {
+    transform:scaleY(.005) scaleX(1);
+    }
+    100% {
+    transform:scaleY(.005) scaleX(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+    transform:scale(0);
+    }
+    100% {
+    transform:scale(1);
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+    transform:scale(1);
+    }
+    100% {
+    transform:scale(0);
+    }
+}

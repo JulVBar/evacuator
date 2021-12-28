@@ -7,6 +7,9 @@ import parallaxBGBlock from './js/parallax-bg';
 import testimonialsTabs from './js/testimonials-tabs';
 import calculate from './js/calculator';
 import galerySwiper from './js/galery-swiper';
+import btnToTop from './js/btn-to-top';
+import newsTitleLimit from './js/news-title';
+import modal from './js/modal';
 import one from './js/js1';
 
 
@@ -21,6 +24,7 @@ window.addEventListener('DOMContentLoaded', function() {
         parallaxBGBlock();
         testimonialsTabs();
         galerySwiper();
+        modal();
     }
     if (document.querySelector('#calculating-page')) {
         calculate();
@@ -28,6 +32,8 @@ window.addEventListener('DOMContentLoaded', function() {
     
     one();
     preloader();
+    btnToTop();
+    newsTitleLimit();
 });
 
 // load all images

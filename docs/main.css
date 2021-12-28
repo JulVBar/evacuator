@@ -895,6 +895,55 @@ button.swiper-pagination-bullet {
     color: #fff;
     box-shadow: 0 0 5px #dd7c0e, 0 0 25px #dd7c0e, 0 0 40px #dd7c0e; }
 
+.button-fixed {
+  position: fixed;
+  z-index: 100; }
+
+.button-to-top {
+  right: 8px;
+  bottom: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0);
+  transition: transform .3s ease; }
+  .button-to-top:hover {
+    transform: translateY(-6px); }
+  .button-to-top.active {
+    opacity: 1;
+    visibility: visible; }
+
+.button-top {
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  opacity: .6; }
+  .button-top i {
+    font-size: 35px;
+    color: white; }
+
+.button__whatsapp {
+  right: 85px;
+  bottom: 15px; }
+  .button__whatsapp a {
+    font-size: 40px;
+    color: #43d854;
+    background: white;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: ripple 2s linear infinite; }
+    .button__whatsapp a:hover {
+      animation-play-state: paused; }
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+  100% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); } }
+
 .hero {
   padding-bottom: 40px;
   background-image: url("./images/evacuator-24-spb-1.jpg");
@@ -1742,7 +1791,7 @@ button.swiper-pagination-bullet {
     padding: 30px;
     background: #333333; }
   .contacts-page__map {
-    margin-bottom: 30px; }
+    margin-bottom: 50px; }
     .contacts-page__map iframe {
       height: 200px;
       width: 100%; }
@@ -1835,6 +1884,11 @@ button.swiper-pagination-bullet {
         pointer-events: none;
         transition: .5s; }
   .connection-form button {
+    margin-left: -30px;
+    margin-bottom: 10px; }
+  .connection-form__agree {
+    font-size: 10px;
+    color: white;
     margin-left: -30px; }
 
 #item-name:after {
@@ -1998,4 +2052,101 @@ button.swiper-pagination-bullet {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+
+.modal.modal-open .modal__container {
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; }
+
+.modal.modal-open .modal__content {
+  transform: scale(0);
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; }
+
+.modal.modal-close .modal__container {
+  transform: scale(1);
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; }
+
+.modal.modal-close .modal__content {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; }
+
+.modal__container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 1000;
+  box-shadow: 0 0 5px 1px #1a1a1a; }
+
+.modal__background {
+  display: table-cell;
+  background: #1a1a1ad2;
+  text-align: center;
+  vertical-align: middle; }
+
+.modal__content {
+  background: #333333;
+  padding: 50px 30px;
+  display: inline-block;
+  border-radius: 3px;
+  position: relative; }
+
+.modal__close-svg {
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  transition: transform .6s ease; }
+  .modal__close-svg:hover {
+    transform: scale(1.3); }
+
+.modal__title {
+  color: white;
+  margin-bottom: 25px; }
+
+.modal__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+  pointer-events: none; }
+  .modal__svg rect {
+    stroke: #1a1a1a;
+    stroke-width: 2px;
+    stroke-dasharray: 778;
+    stroke-dashoffset: 778; }
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0); }
+  50% {
+    transform: scaleY(0.005) scaleX(1); }
+  100% {
+    transform: scaleY(1) scaleX(1); } }
+
+@keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1); }
+  50% {
+    transform: scaleY(0.005) scaleX(1); }
+  100% {
+    transform: scaleY(0.005) scaleX(0); } }
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
 
