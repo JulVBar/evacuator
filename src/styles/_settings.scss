@@ -50,7 +50,7 @@ img {
 }
 
 .main {
-    overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+    overflow: hidden;
 }
 
 .page {
@@ -86,7 +86,9 @@ main {
     outline: none;
 }
 
-
+.no-scroll {
+	overflow: hidden;
+}
 
 .show {
     display: flex;
@@ -167,4 +169,6 @@ main {
 		transform: translate(-50%, -100%);
 	}
 }
+
+
 

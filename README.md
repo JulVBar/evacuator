@@ -1,5 +1,5 @@
 # evacuator
-landing with blog, calculetor for towing service
+landing with blog, calculator for towing service
 
 deployment: https://julvbar.github.io/evacuator/
 

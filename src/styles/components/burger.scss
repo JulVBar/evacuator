@@ -1,0 +1,169 @@
+@include breakpoint($tablet) {
+    .burger {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 30px;
+        z-index: 1001;
+        margin-left: 20px;
+    
+        cursor: pointer;
+
+        &__wrap {
+            position: relative;
+        }
+    
+        span {
+            position: absolute;
+            z-index: 1002;
+            background: $white;
+            width: 100%;
+            height: 3px;
+            top: 14px;
+            transition: .2s linear;
+        }
+    
+        &.active span {
+            transform: scale(0);
+        }
+    
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            background-color: $white;
+            width: 100%;
+            height: 3px;
+            left: 0;
+            transition: .2s linear;
+            z-index: 1002;
+        }
+    
+        &:before {
+            top: 0px;
+        }
+    
+        &:after {
+            bottom: 0;
+        }
+    
+        &.active:before {
+            transform: rotate(45deg);
+            top: 10px;
+        }
+        &.active:after {
+            transform: rotate(-45deg);
+            bottom: 17px;
+        }
+
+        &__bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: $primary;
+            z-index: 999;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: all .8s ease;
+
+            &.active {
+                transform: scale(80);
+            }
+
+        }
+    }
+}
+
+
+.burger__menu {
+    height: 0;
+
+    &.active {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 40px;
+        left: 0;
+        z-index: 1010;
+        background: transparent;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: сenter;
+
+        .burger__icons {  
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 275ms 375ms;
+        }
+
+        .nav__list a {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    } 
+    
+}
+
+.burger__nav {
+    display: flex;
+    margin: 30px auto;
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    a {
+        font-size: 20px;
+        color: $white;
+
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    /* Apparition effect on links */
+
+    & li:nth-child(1) a {
+        transition: all 275ms 175ms;
+        }
+    & li:nth-child(2) a {
+        transition: all 275ms 225ms;
+    }
+    & li:nth-child(3) a {
+        transition: all 275ms 275ms;
+    }
+    & li:nth-child(4) a {
+        transition: all 275ms 325ms;
+    }
+}
+
+.burger__icons {
+    display: flex;
+    margin: 0 auto;
+
+    opacity: 0;
+    transform: translateY(-10px);
+
+    li {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+    a {
+        font-size: 20px;
+        color: $white;
+    }
+}
+
+
+
+

@@ -10,6 +10,8 @@ import galerySwiper from './js/galery-swiper';
 import btnToTop from './js/btn-to-top';
 import newsTitleLimit from './js/news-title';
 import modal from './js/modal';
+import burger from './js/burger';
+import accordion from './js/accordion';
 import one from './js/js1';
 
 
@@ -25,6 +27,7 @@ window.addEventListener('DOMContentLoaded', function() {
         testimonialsTabs();
         galerySwiper();
         modal();
+        accordion();
     }
     if (document.querySelector('#calculating-page')) {
         calculate();
@@ -34,6 +37,7 @@ window.addEventListener('DOMContentLoaded', function() {
     preloader();
     btnToTop();
     newsTitleLimit();
+    burger();
 });
 
 // load all images

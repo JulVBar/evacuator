@@ -54,8 +54,33 @@
                 <span class="header__devider"></span>
                 <a href="tel:+78129482780" class="header__tel">+7 (812) 948-27-80</a>
             </div>
+
+            <div class="burger__wrap">
+                <div class="burger__bg"></div>
+                <div class="burger"><span></span></div>
+            </div>
+            
         </div>
     </header>
+
+    <div class="burger__menu">
+        <div class="burger__menu-bg"></div>
+        <nav class="nav burger__nav">
+            <ul class="nav__list list-reset">
+                <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                <li class="nav__item"><a href="calculator.html" class="nav__link">Расчет стоимости</a></li>
+                <li class="nav__item"><a href="blog.html" class="nav__link">Новости</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons burger__icons">
+            <ul class="social-icons__list list-reset">
+                <li class="social-icons__item"><a href="https://vk.com/evacua24" class="social-icons__link" target="blank"><i class="fab fa-vk"></i></a></li>
+                <li class="social-icons__item"><a href="#" class="social-icons__link" target="blank"><i class="fab fa-telegram-plane"></i></a></li>
+                <li class="social-icons__item"><a href="https://api.whatsapp.com/send?phone=+79019756060" class="social-icons__link" target="blank"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+    </div>
 
     <main class="main" id="home-page">
 
@@ -371,11 +396,11 @@
                 <h3 class="advantages__title--upper medium-title">Нас спрашивают</h3>
                 <h2 class="advantages__title big-title">Часто задаваемые вопросы</h2>
 
-                <div class="faq__wrapper">
-                    <ul class="faq__list list-reset">
-                        <li class="faq__item">
-                            <h3 class="faq__header small-title">Какие документы необходимы для эвакуации авто?</h3>
-                            <div class="faq__body">
+                <div class="faq__accordion">
+                    <ul class="accordion__list list-reset">
+                        <li class="accordion__item">
+                            <button class="accordion__header small-title" aria-expanded="false" type="button">Какие документы необходимы для эвакуации авто?</button>
+                            <div class="accordion__body" aria-hidden="true">
                                 <ul class="list-reset">
                                     <li>Удостоверение личности</li>
                                     <li>Свидетельство о регистрации ТС</li>
@@ -384,15 +409,15 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="faq__item">
-                            <h3 class="faq__header small-title">Как долго ждать эвакуатор?</h3>
-                            <div class="faq__body">
+                        <li class="accordion__item">
+                            <button class="accordion__header small-title" aria-expanded="false" type="button">Как долго ждать эвакуатор?</button>
+                            <div class="accordion__body" aria-hidden="true">
                                 <p>Среднее время подачи 20 минут. Оно зависит от загруженности автострады, а так же от наличия свободных эвакуаторов. Точное время диспетчер сообщит после определения местоположения Вашего автомобиля.</p>
                             </div>
                         </li>
-                        <li class="faq__item">
-                            <h3 class="faq__header small-title">От чего зависит тариф?</h3>
-                            <div class="faq__body">
+                        <li class="accordion__item">
+                            <button class="accordion__header small-title" aria-expanded="false" type="button">От чего зависит тариф?</button>
+                            <div class="accordion__body" aria-hidden="true">
                                 <ul class="list-reset">
                                     <li>Район (город или область)</li>
                                     <li>Время суток</li>
@@ -402,15 +427,15 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="faq__item">
-                            <h3 class="faq__header small-title">Сможете ли Вы эвакуировать автомобиль с заблокированными колесами?</h3>
-                            <div class="faq__body">
+                        <li class="accordion__item">
+                            <button class="accordion__header small-title" aria-expanded="false" type="button">Сможете ли Вы эвакуировать автомобиль с заблокированными колесами?</button>
+                            <div class="accordion__body" aria-hidden="true">
                                 <p>Да, можем. Если заблокировано колесо на машине или сразу два, используется специальное оборудование. Если заблокированы задние колеса или передние, эвакуация требует снятия нагрузок с коробки передач. Чтобы не повредить корпус, тележки устанавливаются домкратом.</p>
                             </div>
                         </li>
-                        <li class="faq__item">
-                            <h3 class="faq__header small-title">Какую информацию необходимо предоставить диспетчеру?</h3>
-                            <div class="faq__body">
+                        <li class="accordion__item">
+                            <button class="accordion__header small-title" aria-expanded="false" type="button">Какую информацию необходимо предоставить диспетчеру?</button>
+                            <div class="accordion__body" aria-hidden="true">
                                 <ul class="list-reset">
                                     <li>Марка и модель автомобиля</li>
                                     <li>Точный адрес, где вы находитесь</li>

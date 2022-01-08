@@ -42,4 +42,8 @@
             color: $secondary;
         }
     }
+
+    @include breakpoint($tablet) {
+        display: none;
+    }
 }

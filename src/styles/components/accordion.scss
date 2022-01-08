@@ -1,0 +1,92 @@
+.accordion {
+    &__list {
+        margin: 0 auto;
+        width: 70%;
+        text-align: left;
+    }
+
+    &__item {
+        margin: 10px 0;
+        cursor: pointer;
+
+        &.open .accordion__body {
+            // display: block;
+            //animation
+            opacity: 1;
+            padding: 20px 10px;
+        }
+        &.open .accordion__header:before {
+            transform: translateY(-50%) rotate(0deg);
+        }
+
+        &.open .accordion__header {
+            color: $secondary;
+        }
+    }
+
+    &__header {
+        position: relative;
+        padding: 10px;
+        padding-right: 40px;
+        border: none;
+        width: 100%;
+        text-align: left;
+        background: #1a1a1a7a;
+        cursor: pointer;
+        
+        transition: color .2s linear;
+
+        &:after,
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            z-index: 1;
+            width: 15px;
+            height: 2px;
+            background: $secondary;
+        }
+
+        &:after {
+            transform: translateY(-50%);
+        }
+
+        &:before {
+            transform: translateY(-50%) rotate(90deg);
+            transition: transform .2s linear;
+        }
+    }
+
+    &__body {
+        background: #1a1a1a48;
+        pointer-events: none;
+        // display: none;
+        //animation
+        box-sizing: content-box; //для правильной работы падингов
+        padding: 0 10px;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        will-change: max-height;
+        transition: all .2s ease-out;
+
+        li {
+            position: relative;
+            margin: 5px 0;
+            padding-left: 10px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) rotate(-45deg);
+                left: 0;
+                z-index: 1;
+                width: 4px;
+                height: 4px;
+                background: $secondary;
+            }
+        }
+    }
+}
