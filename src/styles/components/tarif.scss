@@ -8,9 +8,9 @@
     &__item {
         width: 350px;
         height: 150px;
-        background:rgba(29, 28, 26, 0.801);
+        background: $primary-op;
         border-radius: 5px;
-        @include simple-shadow(#0000007e);
+        @include simple-shadow($black);
         display: flex;
         align-items: center;
         position: relative;
@@ -35,7 +35,7 @@
         width: 90px;
         height: 90px;
         border-radius: 5px;
-        background: rgba(230, 176, 40, 0.9);
+        background: $dark-grey;
         @include simple-shadow($secondary);
         @include flex-all-center;
         transform: rotate(45deg);

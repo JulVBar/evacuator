@@ -49,22 +49,18 @@ img {
     padding: 0;
 }
 
-.main {
-    overflow: hidden;
-}
-
 .page {
     overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
-    // width: 100vw;
-    // height: 100vh;
+	justify-content: space-between;
+    // min-width: 100vw;
+    min-height: 100vh;
 }
 
 header {
     flex: 0 0 60px;
     background-color: $primary;
-    border-bottom: 1px solid grey;
 }
 
 footer {

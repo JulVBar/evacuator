@@ -31,7 +31,7 @@
         border: none;
         width: 100%;
         text-align: left;
-        background: #1a1a1a7a;
+        background: $primary-op;
         cursor: pointer;
         
         transition: color .2s linear;
@@ -59,7 +59,7 @@
     }
 
     &__body {
-        background: #1a1a1a48;
+        background: $primary-op;
         pointer-events: none;
         // display: none;
         //animation

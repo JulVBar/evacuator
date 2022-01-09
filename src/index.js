@@ -3,7 +3,6 @@ import './styles/main.scss';
 import preloader from './js/preloader';
 import typingText from './js/typing-text';
 import counter from './js/counter';
-import parallaxBGBlock from './js/parallax-bg';
 import testimonialsTabs from './js/testimonials-tabs';
 import calculate from './js/calculator';
 import galerySwiper from './js/galery-swiper';
@@ -12,6 +11,7 @@ import newsTitleLimit from './js/news-title';
 import modal from './js/modal';
 import burger from './js/burger';
 import accordion from './js/accordion';
+import navigation from './js/navigation';
 import one from './js/js1';
 
 
@@ -23,7 +23,6 @@ window.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('#home-page')) {
         typingText();
         counter();
-        parallaxBGBlock();
         testimonialsTabs();
         galerySwiper();
         modal();
@@ -38,6 +37,7 @@ window.addEventListener('DOMContentLoaded', function() {
     btnToTop();
     newsTitleLimit();
     burger();
+    navigation();
 });
 
 // load all images

@@ -41,6 +41,10 @@
         &.active {
             color: $secondary;
         }
+
+        &.active::after {
+            width: 100%;
+        }
     }
 
     @include breakpoint($tablet) {

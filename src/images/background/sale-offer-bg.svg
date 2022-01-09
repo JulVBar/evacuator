@@ -12,10 +12,10 @@
 	</defs>
 	<style>
 		tspan { white-space:pre }
-		.s0 { fill: #1a1a1a } 
+		.s0 { fill: #32292b } 
 		.s1 { fill: url(#grd1) } 
-		.s2 { fill: #f4bc33 } 
-		.s3 { fill: #dd7c0e } 
+		.s2 { fill: #eb9019 } 
+		.s3 { fill: #f6b848} 
 	</style>
 	<g id="New Symbol 6">
 		<g id="&lt;Group&gt;">
