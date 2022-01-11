@@ -3,6 +3,11 @@
         display: flex;
         justify-content: center;
         width: 100%;
+
+        @include breakpoint($mini-tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__item {
@@ -10,14 +15,24 @@
         height: 150px;
         background: $primary-op;
         border-radius: 5px;
-        @include simple-shadow($black);
         display: flex;
         align-items: center;
         position: relative;
 
+        opacity: 0;
+
         &:not(:last-child) {
             margin-right: 25px;
-        } 
+
+            @include breakpoint($mini-tablet) {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+        
+        @include breakpoint($mini-tablet) {
+            width: 320px;
+        }
     }
 
     &__picture {
@@ -31,19 +46,8 @@
         height: 100px;
     }
 
-    &__romb {
-        width: 90px;
-        height: 90px;
-        border-radius: 5px;
-        background: $dark-grey;
-        @include simple-shadow($secondary);
-        @include flex-all-center;
-        transform: rotate(45deg);
-        position: relative;
-    }
-
     &__content {
-        padding-left: 35px;
+        padding-left: 120px;
     }
 
     &__title {

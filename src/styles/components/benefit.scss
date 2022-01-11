@@ -8,6 +8,11 @@
         width: 50%;
         text-align: center;
         padding: 20px 15px;
+
+        @include breakpoint($mini-tablet) {
+            width: 100%;
+            padding: 15px 0;
+        }
     }
 
     &__icon {

@@ -10,6 +10,9 @@
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 
+
+@import 'aos/dist/aos.css';
+
 // Ctrl + Alt + X классы SCSS
 // Ctrl + Alt + C классы CSS
 //прописываем background-image: url("./images/picture.jpg");
@@ -39,9 +42,10 @@
 @import "components/connection-form";
 @import "components/blog";
 @import "components/single-post";
+@import "components/animation";
 
 
-@import "components/preloader";
+
 @import "components/modal";
 @import "components/burger";
 

@@ -4,6 +4,12 @@
     padding-top: 30px;
     padding-bottom: 80px;
 
+    @include breakpoint($tablet) {
+        margin-bottom: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
     background-image: url("./images/background/bg-wave.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -11,6 +17,10 @@
 
     &__accordion {
         margin-bottom: 55px;
+
+        @include breakpoint($tablet) {
+            margin-bottom: 20px;
+        }
     }
     
     &__buttons {
@@ -18,6 +28,10 @@
         width: 60%;
         display: flex;
         justify-content: space-between;
+
+        @include breakpoint($tablet) {
+            flex-direction: column;
+        }
     }
 
     &__btn {
@@ -26,6 +40,10 @@
         &--dark {
             background: $dark-grey;
             color: $white;
+
+            @include breakpoint($tablet) {
+                margin-top: 15px;
+            }
 
             &:hover {
                 box-shadow: 0 0 5px $dark-grey,

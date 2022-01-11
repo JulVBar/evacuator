@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <div class="preloader"><div class="loader"></div></div>
+
 <div class="page">
     <header class="header">
         <a  href="index.html" class="header__logo">
@@ -91,24 +91,24 @@
                             Выберите тип автомобиля
                         </div>
                         <ul class="calculating__choose calculating__choose__car list-reset">
-                            <li id="moto" data-tarif="1" data-fix="2000" data-price="50" class="calculating__choose-item">Мотоцикл </li>
-                            <li id="light-car" data-tarif="2" data-fix="2000" data-price="50" class="calculating__choose-item calculating__choose-item_active">Легковой автомобиль</li>
-                            <li id="cross" data-tarif="3" data-fix="2500" data-price="60" class="calculating__choose-item">Кроссовер</li>
-                            <li id="jip" data-tarif="4" data-fix="2500" data-price="60" class="calculating__choose-item">Внедорожник</li>
-                            <li id="minivan" data-tarif="5" data-fix="2500" data-price="60" class="calculating__choose-item">Минивэн</li>
-                            <li id="special" data-tarif="6" data-fix="2500" data-price="60" class="calculating__choose-item">Мини спецтехника</li>
-                            <li id="van" data-tarif="7" data-fix="2500" data-price="60" class="calculating__choose-item">Микроавтобус</li>
-                            <li id="truck" data-tarif="8" data-fix="3000" data-price="70" class="calculating__choose-item">Грузовой автомобиль</li>
+                            <li id="moto" data-tarif="1" data-fix="2000" data-price="50" class="calculating__choose-item" data-aos="fade-down" data-aos-once="true">Мотоцикл </li>
+                            <li id="light-car" data-tarif="2" data-fix="2000" data-price="50" class="calculating__choose-item calculating__choose-item_active" data-aos="fade-down" data-aos-delay="100" data-aos-once="true">Легковой автомобиль</li>
+                            <li id="cross" data-tarif="3" data-fix="2500" data-price="60" class="calculating__choose-item" data-aos="fade-down" data-aos-delay="200" data-aos-once="true">Кроссовер</li>
+                            <li id="jip" data-tarif="4" data-fix="2500" data-price="60" class="calculating__choose-item" data-aos="fade-down" data-aos-delay="300" data-aos-once="true">Внедорожник</li>
+                            <li id="minivan" data-tarif="5" data-fix="2500" data-price="60" class="calculating__choose-item" data-aos="fade-down" data-aos-delay="400" data-aos-once="true">Минивэн</li>
+                            <li id="special" data-tarif="6" data-fix="2500" data-price="60" class="calculating__choose-item" data-aos="fade-down" data-aos-delay="500" data-aos-once="true">Мини спецтехника</li>
+                            <li id="van" data-tarif="7" data-fix="2500" data-price="60" class="calculating__choose-item" data-aos="fade-down" data-aos-delay="600" data-aos-once="true">Микроавтобус</li>
+                            <li id="truck" data-tarif="8" data-fix="3000" data-price="70" class="calculating__choose-item" data-aos="fade-down" data-aos-delay="800" data-aos-once="true">Грузовой автомобиль</li>
                         </ul>
                         <div class="calculating__subtitle small-title">
                             Выберите дополнительные опции
                         </div>
                         <ul class="calculating__insert list-reset">
-                            <li class="calculating__box">
+                            <li class="calculating__box" data-aos="fade-up" data-aos-delay="800" data-aos-once="true">
                                 <div class="calculating__box-subtitle">Расстояние (км)*</div>
                                 <input class="calculating__input-kilo" type="text" id="kilo" placeholder="Введите расстояние">
                             </li>
-                            <li class="calculating__box calculating__steering">   
+                            <li class="calculating__box calculating__steering" data-aos="fade-up" data-aos-delay="1000" data-aos-once="true">   
                                 
                                 <input type="checkbox" class="calculating__checkbox" id="ditch">
                                 <label for="ditch" class="calculating__label">Сложность погрузки</label>
@@ -120,7 +120,7 @@
                                 <label for="preoder" class="calculating__label">Предварительный заказ</label>
                                 
                             </li>
-                            <li class="calculating__box">
+                            <li class="calculating__box" data-aos="fade-up" data-aos-delay="1200" data-aos-once="true">
                                 <div class="calculating__box-subtitle">Заблокированных колёс</div>
                                 <div class="calculating__counter">
                                     <div class="calculating__counter-item calculating__sign" id="minus">-</div>
@@ -131,8 +131,8 @@
                         </ul>
                         <div class="calculating__subtitle small-title">Выберите время суток</div>
                         <div class="calculating__choose" id="daynight">
-                            <div id="night" class="calculating__choose-item">Ночь </div>
-                            <div id="day" class="calculating__choose-item calculating__choose-item_active">День</div>
+                            <div id="night" class="calculating__choose-item" data-aos="fade-right" data-aos-delay="1300" data-aos-once="true">Ночь </div>
+                            <div id="day" class="calculating__choose-item calculating__choose-item_active" data-aos="fade-left" data-aos-delay="1300" data-aos-once="true">День</div>
                         </div>
                         <div class="calculating__total">
                             <div class="calculating__result-text small-title">
@@ -166,8 +166,8 @@
             <div class="footer__column">
                 <div class="footer__content">
                     <h4 class="footer__title small-title">Навигация</h4>
-                    <nav class="nav">
-                        <ul class="nav__list footer__nav list-reset">
+                    <nav class="nav footer__nav">
+                        <ul class="nav__list footer__nav-list list-reset">
                             <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
                             <li class="nav__item"><a href="calculator.html" class="nav__link" data-nav="calculating-page">Расчет стоимости</a></li>
                             <li class="nav__item"><a href="blog.html" class="nav__link" data-nav="blog-page">Новости</a></li>
@@ -180,7 +180,7 @@
             <div class="footer__column">
                 <div class="footer__content">
                     <h4 class="footer__title small-title">Контакты</h4>
-                    <ul class="contacts list-reset">
+                    <ul class="footer__contacts contacts list-reset">
                         <li class="contacts__item"><a href="contacts.html" class="contacts__link"><i class="fas fa-map-marker-alt"></i>СПб, пр-т Большевиков 79 к 4</a></li>
                         <li class="contacts__item"><a href="tel:+78129756060" class="contacts__link"><i class="fas fa-phone-square-alt"></i>8 (812) 975-60-60</a></li>
                         <li class="contacts__item"><a href="tel:+78129482780" class="contacts__link"><i class="fas fa-phone-square-alt"></i>8 (812) 948-27-80</a></li>

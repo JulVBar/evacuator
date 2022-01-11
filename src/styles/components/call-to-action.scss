@@ -7,7 +7,11 @@
     width: 150%;
     height: 150%;
     transform: rotate(-15deg);
-    transition: all .4s linear;
+
+    @include breakpoint($mini-tablet) {
+        bottom: -55%;
+        height: 100%;
+    }
 }
 
 .call-to-action {
@@ -15,6 +19,10 @@
     height: 400px;
     position: relative;
     overflow: hidden;
+
+    @include breakpoint($mini-tablet) {
+        height: 250px;
+    }
 
     &__container {
         width: 100%;
@@ -29,6 +37,11 @@
     &__inner {
         @include flex-w-center;
         padding: 50px 0;
+
+        @include breakpoint($mini-tablet) {
+            flex-direction: column;
+            padding: 15px 0;
+        }
     }
 
     &__content {
@@ -38,9 +51,21 @@
         flex-direction: column;
         justify-content: center;
 
+        @include breakpoint($mini-tablet) {
+            width: 100%;
+            display: none;
+        }
+
         &--main {
             box-shadow: 0px 0px 25px 0px $black;
             margin-right: 40px;
+
+            @include breakpoint($mini-tablet) {
+                margin-right: 0;
+                padding: 20px 0;
+                display: flex;
+            }
+    
         }
     }
     
@@ -52,6 +77,10 @@
 
     &__subtitle{
         margin-bottom: 60px;
+
+        @include breakpoint($mini-tablet) {
+            margin-bottom: 20px;
+        }
     }
 
     &__image {

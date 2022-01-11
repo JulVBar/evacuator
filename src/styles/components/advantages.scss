@@ -1,18 +1,38 @@
 .advantages {
     &__inner {
         display: flex;
+
+        @include breakpoint($mini-tablet) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
 
     &__content {
         width: 50%;
         padding: 40px;
+
+        @include breakpoint($mini-tablet) {
+            width: 100%;
+            padding: 10px;
+        }
     }
 
     &__title {
         margin-bottom: 30px;
 
+        @include breakpoint($mini-tablet) {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
         &--upper {
             margin-top: 20px;
+
+            @include breakpoint($mini-tablet) {
+                text-align: center;
+                margin-top: 0;
+            }
         }
     }
 

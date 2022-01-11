@@ -10,11 +10,14 @@
     &__container {
         z-index: 100;
     }
-    
 
     &__inner {
         text-align: center;
         padding: 50px 0 20px 0;
+
+        @include breakpoint($mini-tablet) {
+            padding: 20px 0;
+        }
     }
 
     &__header {
@@ -34,10 +37,13 @@
         cursor: pointer;
         overflow: hidden;
 
-        
-
         &:not(:last-child) {
             margin-right: 25px;
+        }
+
+        @include breakpoint($mobile) {
+            width: 40px;
+            height: 40px;
         }
     }
 

@@ -1,7 +1,7 @@
 {
   "name": "evacuator",
   "version": "1.0.0",
-  "description": "landing with blog, calculetor for towing service",
+  "description": "landing with blog, calculator for towing service",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "aos": "^3.0.0-beta.6",
     "normalize.css": "^8.0.1",
     "swiper": "^7.3.1"
   }

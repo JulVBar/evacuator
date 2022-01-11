@@ -25,7 +25,6 @@ const optimization = () => {
         config.minimizer = [
             new OptimizeCssAssetsPlugin(), //минимизирует css
             new TerserPlugin(),
-            new CssMqpackerPlugin() //объединяет медиа-запросы
         ];
     }
 

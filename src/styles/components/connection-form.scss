@@ -1,5 +1,10 @@
 .connection-form {
     width: 300px;
+    margin-left: 40px;
+
+    @include breakpoint($tablet) {
+        width: 250px;
+    }
 
     &__item {
         position: relative;
@@ -74,6 +79,10 @@
             padding: 10px 0;
             border: 2px solid $white;
             background: transparent;
+
+            @include breakpoint($tablet) {
+                min-width: 290px;
+            }
 
 
             &:focus {

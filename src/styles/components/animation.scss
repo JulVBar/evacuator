@@ -1,0 +1,40 @@
+.fadeIn, .fadeOut {
+	animation-duration: .8s;
+	animation-timing-function: linear;
+}
+
+.fadeIn {
+	animation-name: fadeIn;
+	opacity: 1;
+	visibility: visible;
+}
+
+.fadeOut {
+	animation-name: fadeOut;
+	opacity: 0;
+	visibility: hidden;
+}
+
+
+@keyframes fadeIn { 
+	from {
+		opacity: 0;
+		visibility: hidden;
+	}
+	to { 
+		opacity:1;
+		visibility: visible; 
+	}
+}
+
+@keyframes fadeOut { 
+	from {
+		opacity: 1;
+		visibility: visible;
+	}
+	to {
+		opacity:0;
+		visibility: hidden;
+	}
+}
+

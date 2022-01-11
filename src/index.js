@@ -1,6 +1,5 @@
 
 import './styles/main.scss';
-import preloader from './js/preloader';
 import typingText from './js/typing-text';
 import counter from './js/counter';
 import testimonialsTabs from './js/testimonials-tabs';
@@ -13,13 +12,13 @@ import burger from './js/burger';
 import accordion from './js/accordion';
 import navigation from './js/navigation';
 import one from './js/js1';
+import AOS from 'aos';
 
 
-
-
-console.log('Это файл APP.JS');
 
 window.addEventListener('DOMContentLoaded', function() {
+    AOS.init();
+
     if (document.querySelector('#home-page')) {
         typingText();
         counter();
@@ -33,7 +32,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     
     one();
-    preloader();
     btnToTop();
     newsTitleLimit();
     burger();

@@ -9,6 +9,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
     <!-- Icon font -->
     <script src="https://kit.fontawesome.com/9ca2acc967.js" crossorigin="anonymous"></script>
@@ -25,8 +26,6 @@
 </head>
 
 <body>
-
-    <div class="preloader"><div class="loader"></div></div>
 
 <div class="page">
     <header class="header">
@@ -87,19 +86,19 @@
         <section class="hero">
             <div class="container">
                 <div class="hero__content">
-                    <h1 class="hero__title">ЭВАКУАЦИЯ АВТОМОБИЛЕЙ И ТЕХНИКИ</h1>
-                    <div class="hero__typing-text">
+                    <h1 class="hero__title" data-aos="fade-down" data-aos-duration="800">ЭВАКУАЦИЯ АВТОМОБИЛЕЙ И ТЕХНИКИ</h1>
+                    <div class="hero__typing-text" data-aos="fade" data-aos-duration="1000">
                         <div class="hero__typing-text">эвакуатор</div>
                         <div class="hero__typing-text hero__typing-text--type"></div>
                     </div>
-                    <h1 class="hero__title hero__title--under">В САНКТ-ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ ОБЛАСТИ</h1>
+                    <h1 class="hero__title hero__title--under" data-aos="fade-up" data-aos-duration="800">В САНКТ-ПЕТЕРБУРГЕ И ЛЕНИНГРАДСКОЙ ОБЛАСТИ</h1>
 
-                    <a href="tel:+78129756060" class="hero__btn general-btn">Вызвать эвакуатор</a>
+                    <a href="tel:+78129756060" class="hero__btn general-btn" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">Вызвать эвакуатор</a>
                 </div> <!--hero__content-->
 
                 <div class="tarif">
-                    <ul class="tarif__list list-reset">
-                        <li class="tarif__item">
+                    <ul class="tarif__list list-reset animation-delay">
+                        <li class="tarif__item" data-aos="fade-left" data-aos-delay="800">
                             <img class="tarif__picture" src="images/standard-car.png" alt="evacuator legkovie avtomobili">
                             <div class="tarif__romb"></div>
                             <div class="tarif__content">
@@ -108,7 +107,7 @@
                                 <p class="tarif__text small-title">от<span>2000</span>рублей</p>
                             </div>
                         </li>
-                        <li class="tarif__item">
+                        <li class="tarif__item" data-aos="fade-left" data-aos-delay="1300">
                             <img class="tarif__picture" src="images/crossover.png" alt="evacuator crossover">
                             <div class="tarif__romb"></div>
                             <div class="tarif__content">
@@ -117,7 +116,7 @@
                                 <p class="tarif__text small-title">от<span>2500</span>рублей</p>
                             </div>
                         </li>
-                        <li class="tarif__item">
+                        <li class="tarif__item" data-aos="fade-left" data-aos-delay="1800">
                             <img class="tarif__picture" src="images/truck.png" alt="evacuator tow truck">
                             <div class="tarif__romb"></div>
                             <div class="tarif__content">
@@ -137,25 +136,25 @@
                 <div class="advantages__inner">
                     <div class="advantages__content">
                         <ul class="benefit__list list-reset">
-                            <li class="benefit__item">
+                            <li class="benefit__item" data-aos="fade-up">
                                 <img class="benefit__icon" src="images/icon/free.png" alt="">
                                 <!-- <div class="benefit__icon"><i class="fas fa-hand-holding-usd"></i></div> -->
                                 <h3 class="benefit__title small-title">ПОДАЧА БЕСПЛАТНО</h3>
                                 <p class="benefit__text">Подача эвакуатора производится БЕСПЛАТНО</p>
                             </li>
-                            <li class="benefit__item">
+                            <li class="benefit__item" data-aos="fade-up">
                                 <img class="benefit__icon" src="images/icon/economy.png" alt="">
                                 <!-- <div class="benefit__icon"><i class="far fa-money-bill-alt"></i></div> -->
                                 <h3 class="benefit__title small-title">ВЫГОДНАЯ ЦЕНА</h3>
                                 <p class="benefit__text">Оплата только за километры. Без учета пробок</p>
                             </li>
-                            <li class="benefit__item">
+                            <li class="benefit__item" data-aos="fade-up" data-aos-delay="50">
                                 <img class="benefit__icon" src="images/icon/24hour.png" alt="">
                                 <!-- <div class="benefit__icon"><i class="fas fa-adjust"></i></div> -->
                                 <h3 class="benefit__title small-title">КРУГЛОСУТОЧНО</h3>
                                 <p class="benefit__text">В любое время суток в любой район города или область</p>
                             </li>
-                            <li class="benefit__item">
+                            <li class="benefit__item" data-aos="fade-up" data-aos-delay="50">
                                 <img class="benefit__icon" src="images/icon/safety.png" alt="">
                                 <!-- <div class="benefit__icon"><i class="fas fa-adjust"></i></div> -->
                                 <h3 class="benefit__title small-title">БЕЗОПАСНОСТЬ</h3>
@@ -166,7 +165,7 @@
                     </div>
 
 
-                    <div class="advantages__content">
+                    <div class="advantages__content" data-aos="fade-left">
                         <h3 class="advantages__title--upper medium-title">ПОЧЕМУ ВЫБИРАЮТ НАС</h3>
                         <h2 class="advantages__title big-title">НАШИ ПРЕИМУЩЕСТВА</h2>
                         <p class="advantages__paragraph">Мы эвакуируем автомобили уже давно. Наша компания зарекомендовала себя на рынке эвакуаторных услуг как поставщик качественного сервиса, и множество наших клиентов – тому подтверждение.</p>
@@ -188,12 +187,12 @@
             <div class="bg-corner"></div>
             <div class="container call-to-action__container">
                 <div class="call-to-action__inner">
-                    <div class="call-to-action__content call-to-action__content--main">
+                    <div class="call-to-action__content call-to-action__content--main" data-aos="fade-right">
                         <h2 class="call-to-action__title big-title">Нужна помощь на дороге?</h2>
                         <h3 class="call-to-action__subtitle small-title">Звони! Мы готовы помочь в любое время!</h3>
                         <a href="tel:+78129756060" class="call-to-action__btn general-btn">Вызвать эвакуатор</a>
                     </div>
-                    <div class="call-to-action__content">
+                    <div class="call-to-action__content" data-aos="fade-left">
                         <img class="call-to-action__image" src="images/evacuator-call.png" alt="">
                     </div>
                 </div>
@@ -238,7 +237,7 @@
 
         <section class="testimonials">
             <div class="container testimonials__container">
-                <div class="testimonials__inner">
+                <div class="testimonials__inner" data-aos="fade-up">
                     <h3 class="advantages__title--upper medium-title">ЧТО ДУМАЮТ О НАС</h3>
                     <h2 class="advantages__title big-title">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
 
@@ -365,7 +364,7 @@
         </section> <!--testimonials-->
 
         <section class="sale-offer">
-            <div class="sale-offer__inner">
+            <div class="sale-offer__inner" data-aos="fade-right">
                 <div class="sale-offer__content">
                     <h3 class="sale-offer__title big-title"> <span>-10%</span> на первый заказ</h3>
                     <a href="tel:+78129756060" class="general-btn">Заказать эвакуатор</a>
@@ -398,7 +397,7 @@
 
                 <div class="faq__accordion">
                     <ul class="accordion__list list-reset">
-                        <li class="accordion__item">
+                        <li class="accordion__item" data-aos="fade-up">
                             <button class="accordion__header small-title" aria-expanded="false" type="button">Какие документы необходимы для эвакуации авто?</button>
                             <div class="accordion__body" aria-hidden="true">
                                 <ul class="list-reset">
@@ -409,13 +408,13 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="accordion__item">
+                        <li class="accordion__item" data-aos="fade-up" data-aos-delay="100">
                             <button class="accordion__header small-title" aria-expanded="false" type="button">Как долго ждать эвакуатор?</button>
                             <div class="accordion__body" aria-hidden="true">
                                 <p>Среднее время подачи 20 минут. Оно зависит от загруженности автострады, а так же от наличия свободных эвакуаторов. Точное время диспетчер сообщит после определения местоположения Вашего автомобиля.</p>
                             </div>
                         </li>
-                        <li class="accordion__item">
+                        <li class="accordion__item" data-aos="fade-up" data-aos-delay="200">
                             <button class="accordion__header small-title" aria-expanded="false" type="button">От чего зависит тариф?</button>
                             <div class="accordion__body" aria-hidden="true">
                                 <ul class="list-reset">
@@ -427,13 +426,13 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="accordion__item">
+                        <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
                             <button class="accordion__header small-title" aria-expanded="false" type="button">Сможете ли Вы эвакуировать автомобиль с заблокированными колесами?</button>
                             <div class="accordion__body" aria-hidden="true">
                                 <p>Да, можем. Если заблокировано колесо на машине или сразу два, используется специальное оборудование. Если заблокированы задние колеса или передние, эвакуация требует снятия нагрузок с коробки передач. Чтобы не повредить корпус, тележки устанавливаются домкратом.</p>
                             </div>
                         </li>
-                        <li class="accordion__item">
+                        <li class="accordion__item" data-aos="fade-up" data-aos-delay="400">
                             <button class="accordion__header small-title" aria-expanded="false" type="button">Какую информацию необходимо предоставить диспетчеру?</button>
                             <div class="accordion__body" aria-hidden="true">
                                 <ul class="list-reset">
@@ -448,8 +447,8 @@
                     </ul>
                 </div>
                 <div class="faq__buttons">
-                    <a href="tel:+78129756060" class="general-btn faq__btn">Вызвать эвакуатор</a>
-                    <a href="calculator.html" class="general-btn faq__btn faq__btn--dark">Рассчитать стоимость</a>
+                    <a href="tel:+78129756060" class="general-btn faq__btn" data-aos="fade-up" data-aos-delay="500">Вызвать эвакуатор</a>
+                    <a href="calculator.html" class="general-btn faq__btn faq__btn--dark" data-aos="fade-up" data-aos-delay="500">Рассчитать стоимость</a>
                 </div>
             </div>
         </section>
@@ -468,8 +467,8 @@
             <div class="footer__column">
                 <div class="footer__content">
                     <h4 class="footer__title small-title">Навигация</h4>
-                    <nav class="nav">
-                        <ul class="nav__list footer__nav list-reset">
+                    <nav class="nav footer__nav">
+                        <ul class="nav__list footer__nav-list list-reset">
                             <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
                             <li class="nav__item"><a href="calculator.html" class="nav__link" data-nav="calculating-page">Расчет стоимости</a></li>
                             <li class="nav__item"><a href="blog.html" class="nav__link" data-nav="blog-page">Новости</a></li>
@@ -482,7 +481,7 @@
             <div class="footer__column">
                 <div class="footer__content">
                     <h4 class="footer__title small-title">Контакты</h4>
-                    <ul class="contacts list-reset">
+                    <ul class="footer__contacts contacts list-reset">
                         <li class="contacts__item"><a href="contacts.html" class="contacts__link"><i class="fas fa-map-marker-alt"></i>СПб, пр-т Большевиков 79 к 4</a></li>
                         <li class="contacts__item"><a href="tel:+78129756060" class="contacts__link"><i class="fas fa-phone-square-alt"></i>8 (812) 975-60-60</a></li>
                         <li class="contacts__item"><a href="tel:+78129482780" class="contacts__link"><i class="fas fa-phone-square-alt"></i>8 (812) 948-27-80</a></li>

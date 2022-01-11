@@ -4,8 +4,11 @@
         background-position: bottom;
         background-size: cover;
 
-
         margin: 30px 0;
+
+        @include breakpoint($mini-tablet) {
+            margin: 0;
+        }
 
     &__inner {
         display: flex;
@@ -19,17 +22,36 @@
         padding: 50px 0;
         text-align: center;
 
+        @include breakpoint($mini-tablet) {
+            width: 100%;
+            padding: 20px;
+        }
+
         span {
             padding: 0px 10px 0px 10px;
             border-radius: 25px 0px 25px 0px;
             background: linear-gradient(45deg, $orange, $secondary);
             @include simple-shadow($dark-grey);
+
+            @include breakpoint($mini-tablet) {
+                min-height: 50px;
+                width: 200px;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                padding: 20px 0;
+            }
         }
     }
 
     &__title {
         letter-spacing: 3px;
         margin-bottom: 80px;
+
+        @include breakpoint($mini-tablet) {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
 
         span {
             font-size: 50px;

@@ -6,6 +6,10 @@
     text-transform: uppercase; 
     line-height: 30px;
     letter-spacing: 6px;
+
+    @include breakpoint($mini-tablet) {
+        font-size: 15px;
+    }
 }
 
 .medium-title {
@@ -16,6 +20,10 @@
     text-transform: uppercase;
     line-height: 25px;
     letter-spacing: 3px;
+
+    @include breakpoint($mini-tablet) {
+        font-size: 13px;
+    }
 }
 
 .small-title {
@@ -26,6 +34,10 @@
     line-height: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
+
+    @include breakpoint($mini-tablet) {
+        font-size: 12px;
+    }
 }
 
 .secondary-text {
